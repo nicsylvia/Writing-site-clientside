@@ -1,10 +1,10 @@
 import React from 'react'
-import Header from './Components/Header/Header'
+import AllRoutes from './Components/AllRoutes/AllRoutes'
 
 const App = () => {
   return (
     <div>
-      <Header />
+      <AllRoutes />
     </div>
   )
 }

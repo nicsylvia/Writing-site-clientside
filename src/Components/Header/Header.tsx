@@ -25,9 +25,9 @@ const Header = () => {
                 <Img src={logo} />
               </Logo>
               <Navigation>
-                  <Nav>Home</Nav>
-                  <Nav>Contact Me</Nav>
-                  <Nav>Blogs</Nav>
+                  <Nav  cc = "black">Home</Nav>
+                  <Nav cc = "black">Contact Me</Nav>
+                  <Nav cc = "black">Blogs</Nav>
               </Navigation>
             </WrapAll>
             <Buttons>
@@ -48,9 +48,9 @@ const Header = () => {
             {
                 toggle ?  <NavSide>
                 <Wrap>
-                  <Nav>Home</Nav>
-                  <Nav>Contact Me</Nav>
-                  <Nav>Blogs</Nav>
+                  <Nav cc = "white">Home</Nav>
+                  <Nav cc = "white">Contact Me</Nav>
+                  <Nav cc = "white">Blogs</Nav>
                     <br />
                     <Login>Login</Login>
                     <br />
@@ -72,6 +72,7 @@ const Hamburger = styled.div`
     display: none;
     color: black;
     cursor: pointer;
+    margin-right: 10px;
     @media screen and (max-width: 500px) {
         display: block;
     }
@@ -81,6 +82,7 @@ const Cancel = styled.div`
     display: none;
     color: black;
     cursor: pointer;
+    margin-right: 10px;
     @media screen and (max-width: 500px) {
         display: block;
     }
@@ -95,7 +97,7 @@ const NavSide = styled.div`
     }
 `;
 const Wrap = styled.div`
-    background-color: rgba(0, 0, 139, 0.747);
+    background-color: rgba(0, 0, 0, 0.747);
     backdrop-filter: blur(2px);
     width: 400px;
     height: 85vh;
@@ -162,12 +164,12 @@ const Navigation = styled.div`
         display: none;
     }
 `;
-const Nav = styled.div`
+const Nav = styled.div<{cc: string}>`
     margin-right: 20px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
-    color: black;
+    color: ${(props) => props.cc};
     @media screen and (max-width: 500px) {
         margin-bottom: 20px;
         border-top: 1px solid white;
