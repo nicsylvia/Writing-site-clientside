@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <div>
       <Container>
-            <Wrapper>
+          <Wrapper>
             <Logo>
               <Img src={logo} />
             </Logo>
@@ -22,7 +22,7 @@ const Header = () => {
                 <Login>LOGIN</Login>
                 <SignUp>SIGN UP</SignUp>
             </Buttons>
-            </Wrapper>
+          </Wrapper>
       </Container>
     </div>
   )
@@ -55,13 +55,21 @@ const Wrapper = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
+    background-color: red;
     justify-content: space-between;
 `;
 const Logo = styled.div`
     cursor: pointer;
     font-size: 30px;
+    width: 100px;
+    height: 70px;
 `;
-const Img = styled.img``;
+const Img = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: green;
+`;
 const Navigation = styled.div`
     display: flex;
     justify-content: space-around;
