@@ -15,7 +15,7 @@ const Header = () => {
   const removeNavSide = () =>{
       setToggle(false)
   }
-  
+
   return (
     <div>
       <Container>
@@ -42,7 +42,26 @@ const Header = () => {
                 <Hamburger  onClick={showNavSide}>
                 <GiHamburgerMenu />
             </Hamburger> 
+          }
+
+            {/* For the navs to show on minimized screen */}
+            {
+                toggle ?  <NavSide>
+                <Wrap>
+                    <Nav>Home</Nav>
+                    <Nav>About</Nav>
+                    <Nav>Contact Us</Nav>
+                    <Nav>Services</Nav>
+                    <Nav>Portfolios</Nav>
+                    <br />
+                        <Login>LOGIN</Login>
+                        <br />
+                        <br />
+                        <SignUp>SIGN UP</SignUp>
+                </Wrap>
+            </NavSide> : null
             }
+
       </Container>
     </div>
   )
