@@ -4,25 +4,45 @@ import { GiHamburgerMenu } from "react-icons/gi"
 import logo from "../Assets/logo.png"
 
 const Header = () => {
+
+  // State for the menu and cancel button to show
+  const [toggle, setToggle] = useState(false);
+
+  const showNavSide = () =>{
+      setToggle(!toggle)
+  }
+
+  const removeNavSide = () =>{
+      setToggle(false)
+  }
+  
   return (
     <div>
       <Container>
           <Wrapper>
-            <Logo>
-              <Img src={logo} />
-            </Logo>
-            <Navigation>
-                <Nav>Home</Nav>
-                <Nav>About</Nav>
-                <Nav>Contact Us</Nav>
-                <Nav>Services</Nav>
-                <Nav>Portfolios</Nav>
-            </Navigation>
+            <WrapAll>
+              <Logo>
+                <Img src={logo} />
+              </Logo>
+              <Navigation>
+                  <Nav>Home</Nav>
+                  <Nav>Contact Me</Nav>
+                  <Nav>Blogs</Nav>
+              </Navigation>
+            </WrapAll>
             <Buttons>
-                <Login>LOGIN</Login>
-                <SignUp>SIGN UP</SignUp>
+                <Login>Login</Login>
+                <SignUp>Upload Posts</SignUp>
             </Buttons>
           </Wrapper>
+
+          {/* For the menu and cancel button to show */}
+          {
+                toggle ?  <span onClick={removeNavSide}>x</span> :  
+                <Hamburger  onClick={showNavSide}>
+                <GiHamburgerMenu />
+            </Hamburger> 
+            }
       </Container>
     </div>
   )
@@ -55,7 +75,7 @@ const Wrapper = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
-    background-color: red;
+    /* background-color: red; */
     justify-content: space-between;
 `;
 const Logo = styled.div`
@@ -63,23 +83,36 @@ const Logo = styled.div`
     font-size: 30px;
     width: 100px;
     height: 70px;
+    font-weight: bold;
+`;
+const WrapAll = styled.div`
+  /* background-color: orange; */
+  display: flex;
+  width: 400px;
+  align-items: center;
+  justify-content: space-between;
 `;
 const Img = styled.img`
   width: 100%;
   height: 100%;
+  margin-right: 50px;
   object-fit: contain;
-  background-color: green;
+  /* background-color: green; */
 `;
 const Navigation = styled.div`
     display: flex;
     justify-content: space-around;
+    /* background-color: brown; */
     @media screen and (max-width: 500px) {
         display: none;
     }
 `;
 const Nav = styled.div`
-    margin-right: 10px;
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: bold;
     cursor: pointer;
+    color: black;
     @media screen and (max-width: 500px) {
         margin-bottom: 20px;
         border-top: 1px solid white;
@@ -97,7 +130,7 @@ const Buttons = styled.div`
 const Login = styled.div`
     margin-right: 10px;
     cursor: pointer;
-    background-color: blue;
+    background-color: black;
     padding: 10px 15px;
     border-radius: 5px;
     @media screen and (max-width: 500px) {
@@ -110,7 +143,7 @@ const Login = styled.div`
 `;
 const SignUp = styled.div`
     cursor: pointer;
-    background-color: blue;
+    background-color: black;
     padding: 10px 15px;
     border-radius: 5px;
     @media screen and (max-width: 500px) {
