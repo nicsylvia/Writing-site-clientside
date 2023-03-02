@@ -69,6 +69,35 @@ const Header = () => {
 
 export default Header;
 
+const Hamburger = styled.div`
+    font-size: 30px;
+    display: none;
+    color: blue;
+    cursor: pointer;
+    @media screen and (max-width: 500px) {
+        display: block;
+    }
+`;
+const NavSide = styled.div`
+    width: 100%;
+    height: 85vh;
+    position: absolute;
+    top: 70px;
+    @media screen and (max-width: 500px) {
+        display: block;
+    }
+`;
+const Wrap = styled.div`
+    background-color: rgba(0, 0, 139, 0.747);
+    backdrop-filter: blur(2px);
+    width: 400px;
+    height: 85vh;
+    color: white;
+    font-size: 20px;
+    padding-top: 20px;
+    border-radius: 0px 0px 5px 0px;
+`;
+
 const Container = styled.div`
     width: 100%;
     position: fixed;
