@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
-import { GiHamburgerMenu } from "react-icons/gi"
+import { GiHamburgerMenu, GiCancel } from "react-icons/gi"
 import logo from "../Assets/logo.png"
 
 const Header = () => {
@@ -38,7 +38,7 @@ const Header = () => {
 
           {/* For the menu and cancel button to show */}
           {
-                toggle ?  <span onClick={removeNavSide}>x</span> :  
+                toggle ?  <Cancel onClick={removeNavSide}> <GiCancel /> </Cancel> :  
                 <Hamburger  onClick={showNavSide}>
                 <GiHamburgerMenu />
             </Hamburger> 
@@ -48,16 +48,14 @@ const Header = () => {
             {
                 toggle ?  <NavSide>
                 <Wrap>
-                    <Nav>Home</Nav>
-                    <Nav>About</Nav>
-                    <Nav>Contact Us</Nav>
-                    <Nav>Services</Nav>
-                    <Nav>Portfolios</Nav>
+                  <Nav>Home</Nav>
+                  <Nav>Contact Me</Nav>
+                  <Nav>Blogs</Nav>
                     <br />
-                        <Login>LOGIN</Login>
-                        <br />
-                        <br />
-                        <SignUp>SIGN UP</SignUp>
+                    <Login>Login</Login>
+                    <br />
+                    <br />
+                  <SignUp>Upload Posts</SignUp>
                 </Wrap>
             </NavSide> : null
             }
@@ -72,7 +70,16 @@ export default Header;
 const Hamburger = styled.div`
     font-size: 30px;
     display: none;
-    color: blue;
+    color: black;
+    cursor: pointer;
+    @media screen and (max-width: 500px) {
+        display: block;
+    }
+`;
+const Cancel = styled.div`
+    font-size: 30px;
+    display: none;
+    color: black;
     cursor: pointer;
     @media screen and (max-width: 500px) {
         display: block;
