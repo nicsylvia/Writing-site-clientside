@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
 import styled from 'styled-components';
 import { GiHamburgerMenu } from "react-icons/gi"
+import logo from "../Assets/logo.png"
 
 const Header = () => {
   return (
     <div>
       <Container>
             <Wrapper>
-            <Logo>SYLVIE</Logo>
+            <Logo>
+              <Img src={logo} />
+            </Logo>
             <Navigation>
                 <Nav>Home</Nav>
                 <Nav>About</Nav>
@@ -58,6 +61,7 @@ const Logo = styled.div`
     cursor: pointer;
     font-size: 30px;
 `;
+const Img = styled.img``;
 const Navigation = styled.div`
     display: flex;
     justify-content: space-around;
