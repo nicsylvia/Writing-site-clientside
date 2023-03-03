@@ -7,8 +7,8 @@ const Hero = () => {
       <div>
           <Container>
               <Wrapper>
-                  <h1>Contact Me</h1>
-                  <p><a href="/">Home</a> / Send-Me-A-Message</p>
+                  <h1>Posts</h1>
+                  <p><a href="/">Home</a> / My-Blog</p>
               </Wrapper>
           </Container>
       </div>
