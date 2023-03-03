@@ -3,6 +3,7 @@ import { AiOutlineEye } from "react-icons/ai";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import universalism from "../Assets/universalism.png"
+import brother from "../Assets/brother.png";
 
 const BlogPost = () => {
   return (
@@ -23,7 +24,9 @@ const BlogPost = () => {
 
                     <DownPart>
 					<Hold>
-						<AuthorImage col="red" >AO</AuthorImage>
+						<AuthorImage>
+                            <Img src = {brother} />
+                        </AuthorImage>
 						<AuthName>SOOO</AuthName>
 					</Hold>
 					<ViewIcon>
@@ -35,7 +38,7 @@ const BlogPost = () => {
                 <HoverCard>
 				<First>
 					<Hold>
-                        <AuthorImage col="red" >AO</AuthorImage>
+                        <AuthorImage>AO</AuthorImage>
 						<AuthName>SOOO</AuthName>
 					</Hold>
 					<But>+ View</But>
@@ -189,12 +192,16 @@ const Button = styled.div`
 	font-weight: bold;
 	border-radius: 20px;
 `;
-
-const AuthorImage = styled.div<{col: string}>`
-	height: 30px;
-	width: 30px;
+const Img = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+`;
+const AuthorImage = styled.div`
+	height: 40px;
+	width: 40px;
 	border-radius: 50%;
-	background-color: ${(props) => props.col};
+	/* background-color: ; */
 	display: flex;
 	justify-content: center;
 	align-items: center;
