@@ -19,6 +19,19 @@ const BlogPost = () => {
 							</TitleHold>
 						</Cont>
 					</ImageHolder>
+
+                    <DownPart>
+					<Hold>
+						<AuthorImage col={
+							"#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6)
+						}>{books.authorImage}</AuthorImage>
+						<AuthName>{books.author}</AuthName>
+					</Hold>
+					<ViewIcon>
+						<AiOutlineEye />
+						<span>19K</span>
+					</ViewIcon>
+				</DownPart>
 			
     </div>
   )
