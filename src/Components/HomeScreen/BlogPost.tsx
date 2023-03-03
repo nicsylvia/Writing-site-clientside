@@ -1,21 +1,22 @@
 import React, { useEffect, useRef, useState } from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import styled from "styled-components";
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import universalism from "../Assets/universalism.png"
 
 const BlogPost = () => {
   return (
     <div>
         <Container>
-          <Link style = {{textDecoration: "none"}}>
-		  		<Card key={books._id}>
+          <Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
+		  		<Card>
 					<ImageHolder>
-						<Image src={books.coverImage} />
+						<Image src={universalism} />
 						<Cont>
-							<Button>{books.category}</Button>
+							<Button>Religion</Button>
 
 							<TitleHold>
-								<Title>{books.tittle}</Title>
+								<Title>Universalism as a religion?</Title>
 							</TitleHold>
 						</Cont>
 					</ImageHolder>
