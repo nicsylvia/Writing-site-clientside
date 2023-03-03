@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import styled from 'styled-components';
 import { GiHamburgerMenu, GiCancel } from "react-icons/gi"
 import logo from "../Assets/logo.png"
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -21,18 +22,18 @@ const Header = () => {
       <Container>
           <Wrapper>
             <WrapAll>
-              <Logo>
+              <Logo to = "/">
                 <Img src={logo} />
               </Logo>
               <Navigation>
-                  <Nav  cc = "black">Home</Nav>
-                  <Nav cc = "black">Contact Me</Nav>
-                  <Nav cc = "black">Blogs</Nav>
+                  <Nav  to = "/"  cc = "black">Home</Nav>
+                  <Nav  to = "/send-me-a-message" cc = "black">Contact Me</Nav>
+                  <Nav to = "/all-blogs"  cc = "black">Blogs</Nav>
               </Navigation>
             </WrapAll>
             <Buttons>
-                <Login>Login</Login>
-                <SignUp>Upload Posts</SignUp>
+                <Login to = "/register">Sign Up</Login>
+                <SignUp to = "/login">Upload Posts</SignUp>
             </Buttons>
           </Wrapper>
 
@@ -48,14 +49,14 @@ const Header = () => {
             {
                 toggle ?  <NavSide>
                 <Wrap>
-                  <Nav cc = "white">Home</Nav>
-                  <Nav cc = "white">Contact Me</Nav>
-                  <Nav cc = "white">Blogs</Nav>
+                  <Nav to = "/"  cc = "white">Home</Nav>
+                  <Nav to = "/send-me-a-message" cc = "white">Contact Me</Nav>
+                  <Nav to = "/all-blogs"  cc = "white">Blogs</Nav>
                     <br />
-                    <Login>Login</Login>
+                    <Login to = "/register">Sign Up</Login>
                     <br />
                     <br />
-                  <SignUp>Upload Posts</SignUp>
+                  <SignUp to = "/login">Upload Posts</SignUp>
                 </Wrap>
             </NavSide> : null
             }
@@ -135,7 +136,7 @@ const Wrapper = styled.div`
     /* background-color: red; */
     justify-content: space-between;
 `;
-const Logo = styled.div`
+const Logo = styled(Link)`
     cursor: pointer;
     font-size: 30px;
     width: 100px;
@@ -164,7 +165,7 @@ const Navigation = styled.div`
         display: none;
     }
 `;
-const Nav = styled.div<{cc: string}>`
+const Nav = styled(Link)<{cc: string}>`
     margin-right: 20px;
     font-size: 18px;
     font-weight: bold;
@@ -184,7 +185,7 @@ const Buttons = styled.div`
         display: none;
     }
 `;
-const Login = styled.div`
+const Login = styled(Link)`
     margin-right: 10px;
     cursor: pointer;
     background-color: black;
@@ -198,7 +199,7 @@ const Login = styled.div`
         align-items: center;
     }
 `;
-const SignUp = styled.div`
+const SignUp = styled(Link)`
     cursor: pointer;
     background-color: black;
     padding: 10px 15px;
