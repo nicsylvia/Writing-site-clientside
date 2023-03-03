@@ -171,6 +171,7 @@ const Nav = styled(Link)<{cc: string}>`
     font-weight: bold;
     cursor: pointer;
     color: ${(props) => props.cc};
+    text-decoration: none;
     @media screen and (max-width: 500px) {
         margin-bottom: 20px;
         border-top: 1px solid white;
@@ -191,6 +192,8 @@ const Login = styled(Link)`
     background-color: black;
     padding: 10px 15px;
     border-radius: 5px;
+    text-decoration: none;
+    color: white;
     @media screen and (max-width: 500px) {
         width: 150px;
         margin-left: 10px;
@@ -201,6 +204,8 @@ const Login = styled(Link)`
 `;
 const SignUp = styled(Link)`
     cursor: pointer;
+    color: white;
+    text-decoration: none;
     background-color: black;
     padding: 10px 15px;
     border-radius: 5px;
