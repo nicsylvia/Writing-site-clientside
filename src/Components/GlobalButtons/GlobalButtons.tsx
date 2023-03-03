@@ -16,9 +16,10 @@ const GlobalButton: React.FC<Iprops> = ({text}) => {
 export default GlobalButton;
 
 const Button = styled.button`
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
+    background-color: #87CEEB;
+    color: black;
     border: none;
+    font-weight: bold;
     outline: none;
     border-radius: 40px;
     padding: 20px 40px;
@@ -30,7 +31,7 @@ const Button = styled.button`
     cursor: pointer;
     :hover{
         transform: scale(0.95);
-        color: black;
+        color: #87CEEB;
         background-color: white;
     }
 `;

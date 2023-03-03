@@ -28,15 +28,15 @@ const Hero = () => {
 					<GlobalButton text='Mobile' />
 				</ButtonHold>
 
-				<Maintext>
-                    <h3>Explore Augustine's Blog Posts</h3>
-                    <p>Augustine Writes </p>
-                    <InputField>
-                        <input type="search" placeholder = "Search by blog tittle" />
-                        <Search>Search</Search>
-                        </InputField>
-  
-                </Maintext>
+				<h3>Explore Augustine's Blog Posts</h3>
+				<p>
+					Writing helps calm the nerves for me and helps me pen down thoughts i want to ponder on in quiet moments. Explore and send me a message
+				</p>
+
+                <InputField>
+                    <input type="search" placeholder = "Search by blog tittle" />
+                    <Search>Search</Search>
+                </InputField>
 			</Content>
 		</Container>
     </div>
@@ -45,44 +45,6 @@ const Hero = () => {
 
 export default Hero;
 
-const Maintext = styled.div`
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.8);
-  height : 100vh;
-  width : 100%;
-  z-index: 1;
-  color : white;
-  h3{
-    font-size: 50px;
-    margin: 0;
-  }
-  p{
-    font-size: 20px;
-    margin: 0;
-    margin-top: 5px;
-  }
-  @media screen and (max-width: 768px) {
-    p{
-      font-size: 18px;
-      /* background-color: black; */
-    }
-  }
-  @media screen and (max-width: 425px) {
-    h3{
-      font-size: 30px;
-    }
-    p{
-      /* font-size: 12px; */
-      width: 280px;
-      /* background-color: red; */
-    }
-  }
-`;
 const InputField = styled.div`
   display: flex;
   width: 650px;
@@ -125,8 +87,8 @@ const Search = styled.div`
   padding: 15px 0px 15px 0px;
   /* height: 50px; */
   border-radius: 30px;
-  background-color: #005555;
-  color: #F2F6F6;
+  background-color: #87CEEB;
+  color: black;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,12 +122,13 @@ position: absolute;
 height: 100%;
 width: 100%;
 display: flex;
+margin-top: 50px;
 /* justify-content: center; */
 flex-direction: column;
 align-items: center;
 text-align: center;
 
-h2 {
+h3 {
     font-size: 30px;
     margin: 0;
     margin-top: 30px;
@@ -189,7 +152,7 @@ const Video = styled.video`
 `;
 const Container = styled.div`
 	width: 100%;
-    height: calc(100vh - 70px);
+  height: calc(100vh - 70px);
 	position: relative;
 	display: flex;
 	justify-content: center;
