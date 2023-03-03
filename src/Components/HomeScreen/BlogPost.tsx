@@ -142,22 +142,24 @@ const Title = styled.div`
 const TitleHold = styled.div`
 	opacity: 0;
 	height: 150px;
-	color: black;
+	color: white;
     font-weight: bold;
 	display: flex;
 	transition: all 350ms;
 	border-radius: 5px;
-	/* background-color: red; */
+	background-color: red;
 	background-image: linear-gradient(
 		0deg,
-		#87CEEB 0%,
-		rgba(253, 187, 45, 0) 100%
+		#000000 0%,
+		rgba(0, 0, 0, 0) 100%
 	);
 	position: relative;
 	:hover {
 		opacity: 1;
 	}
-	/* display: none; */
+    @media screen and (max-width: 768px) {
+        background-color: blue;
+    }
 `;
 const ImageHolder = styled.div`
 	height: 200px;
