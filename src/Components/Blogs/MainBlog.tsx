@@ -36,6 +36,27 @@ const MainBlog = () => {
 					</ViewIcon>
 				</DownPart>
 
+                <HoverCard>
+				<First>
+					<Hold>
+                    <AuthorImage>
+                            <Img src = {brother} />
+                    </AuthorImage>
+						<AuthName>Augustine Adimike</AuthName>
+					</Hold>
+					<But>+ View</But>
+				</First>
+				<Second>
+					<MainImage src={universalism} />
+					<MainImage src={universalism} />
+					<MainImage src={universalism} />
+				</Second>
+			</HoverCard>
+
+            </Card>
+		  </Link>
+		</Container>
+
     </div>
   )
 }
