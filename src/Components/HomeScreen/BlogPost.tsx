@@ -147,7 +147,7 @@ const TitleHold = styled.div`
 	display: flex;
 	transition: all 350ms;
 	border-radius: 5px;
-	background-color: red;
+	/* background-color: red; */
 	background-image: linear-gradient(
 		0deg,
 		#000000 0%,
@@ -157,9 +157,6 @@ const TitleHold = styled.div`
 	:hover {
 		opacity: 1;
 	}
-    @media screen and (max-width: 768px) {
-        background-color: blue;
-    }
 `;
 const ImageHolder = styled.div`
 	height: 200px;
