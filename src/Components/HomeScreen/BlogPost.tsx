@@ -27,19 +27,21 @@ const BlogPost = () => {
 						<AuthorImage>
                             <Img src = {brother} />
                         </AuthorImage>
-						<AuthName>SOOO</AuthName>
+						<AuthName>Augustine Adimike</AuthName>
 					</Hold>
 					<ViewIcon>
 						<AiOutlineEye />
-						<span>19K</span>
+						<span>0K</span>
 					</ViewIcon>
 				</DownPart>
 
                 <HoverCard>
 				<First>
 					<Hold>
-                        <AuthorImage>AO</AuthorImage>
-						<AuthName>SOOO</AuthName>
+                    <AuthorImage>
+                            <Img src = {brother} />
+                    </AuthorImage>
+						<AuthName>Augustine Adimike</AuthName>
 					</Hold>
 					<But>+ View</But>
 				</First>
@@ -140,14 +142,15 @@ const Title = styled.div`
 const TitleHold = styled.div`
 	opacity: 0;
 	height: 150px;
-	color: white;
+	color: black;
+    font-weight: bold;
 	display: flex;
 	transition: all 350ms;
 	border-radius: 5px;
 	/* background-color: red; */
 	background-image: linear-gradient(
 		0deg,
-		rgba(65, 73, 73, 1) 0%,
+		#87CEEB 0%,
 		rgba(253, 187, 45, 0) 100%
 	);
 	position: relative;
@@ -182,26 +185,26 @@ const Cont = styled.div`
 `;
 const Button = styled.div`
 	margin: 10px;
-	background-color: #302f3e;
+	background-color: skyblue;
 	width: 130px;
 	height: 35px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	color: white;
+	color: black;
 	font-weight: bold;
 	border-radius: 20px;
 `;
 const Img = styled.img`
     width: 100%;
     height: 100%;
-    object-fit: contain;
+    object-fit: cover;
 `;
 const AuthorImage = styled.div`
 	height: 40px;
 	width: 40px;
 	border-radius: 50%;
-	/* background-color: ; */
+    overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
