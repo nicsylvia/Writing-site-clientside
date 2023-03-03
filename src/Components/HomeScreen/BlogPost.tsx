@@ -5,7 +5,22 @@ import { Link } from "react-router-dom"
 
 const BlogPost = () => {
   return (
-    <div>BlogPost</div>
+    <div>
+        <Container>
+          <Link style = {{textDecoration: "none"}}>
+		  		<Card key={books._id}>
+					<ImageHolder>
+						<Image src={books.coverImage} />
+						<Cont>
+							<Button>{books.category}</Button>
+
+							<TitleHold>
+								<Title>{books.tittle}</Title>
+							</TitleHold>
+						</Cont>
+					</ImageHolder>
+			
+    </div>
   )
 }
 
