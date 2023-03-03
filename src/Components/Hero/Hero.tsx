@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components';
 import herovideo from "../Assets/heroVideo.mp4";
+import { AiOutlineSearch } from "react-icons/ai";
+import GlobalButton from '../GlobalButtons/GlobalButtons';
+
 const Hero = () => {
   return (
     <div>
@@ -11,7 +14,7 @@ const Hero = () => {
 				loop
 				playsInline
 				muted
-				src='https://cdn.dribbble.com/uploads/39417/original/49dbf46eae15d227fc95a69cee31251e.mp4?1657824906'
+				src={ herovideo }
 			/>
 
 			<Content>
@@ -39,13 +42,7 @@ const Hero = () => {
 					<Icon>
 						<AiOutlineSearch />
 					</Icon>
-					<Input
-						onKeyPress={SearchResult}
-						onChange={(e) => {
-							setSearch(e.target.value);
-						}}
-						placeholder='Search by author name'
-					/>
+					<Input placeholder='Search by author name' />
 				</InputHold>
 			</Content>
 		</Container>
@@ -56,7 +53,7 @@ const Hero = () => {
 
 export default Hero;
 
-cconst Input = styled.input`
+const Input = styled.input`
 background-color: transparent;
 border: none;
 outline: none;
