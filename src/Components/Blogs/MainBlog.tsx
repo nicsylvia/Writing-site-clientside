@@ -8,7 +8,6 @@ import brother from "../Assets/brother.png";
 const MainBlog = () => {
   return (
     <div>
-        <div>
         <Container>
           <Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
 		  		<Card>
@@ -56,14 +55,14 @@ const MainBlog = () => {
             </Card>
 		  </Link>
 		</Container>
-
+			
     </div>
   )
 }
 
 export default MainBlog;
 
-onst HoverCard = styled.div`
+const HoverCard = styled.div`
 	height: 150px;
 	width: 100%;
 	/* background-color: red; */
