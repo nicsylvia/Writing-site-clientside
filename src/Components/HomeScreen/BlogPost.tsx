@@ -23,10 +23,8 @@ const BlogPost = () => {
 
                     <DownPart>
 					<Hold>
-						<AuthorImage col={
-							"#" + Math.floor(Math.random() * 16777215).toString(16).padStart(6)
-						}>{books.authorImage}</AuthorImage>
-						<AuthName>{books.author}</AuthName>
+						<AuthorImage col="red" >AO</AuthorImage>
+						<AuthName>SOOO</AuthName>
 					</Hold>
 					<ViewIcon>
 						<AiOutlineEye />
@@ -37,17 +35,15 @@ const BlogPost = () => {
                 <HoverCard>
 				<First>
 					<Hold>
-						<AuthorImage col={
-							"#" + Math.floor(Math.random() * 10000000).toString(16).padStart(6)
-						} >{books.authorImage}</AuthorImage>
-						<AuthName>{books.author}</AuthName>
+                        <AuthorImage col="red" >AO</AuthorImage>
+						<AuthName>SOOO</AuthName>
 					</Hold>
 					<But>+ View</But>
 				</First>
 				<Second>
-					<MainImage src={books.coverImage} />
-					<MainImage src={books.coverImage} />
-					<MainImage src={books.coverImage} />
+					<MainImage src={universalism} />
+					<MainImage src={universalism} />
+					<MainImage src={universalism} />
 				</Second>
 			</HoverCard>
 
