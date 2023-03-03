@@ -89,7 +89,7 @@ const AuthorImage = styled.div`
 	height: 50px;
 	width: 50px;
 	border-radius: 50%;
-	background-color: #bb3d6e;
+	overflow: hidden;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -117,7 +117,12 @@ const MainImage = styled.img`
 	height: 500px;
 	width: 100%;
 	border-radius: 5px;
-	background-color: #e7e6e6;
+	/* background-color: #e7e6e6; */
+    background-image: url(${universalism});
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(10px);
 	margin-right: 5px;
 	object-fit: contain;
 	margin-top: 30px;
@@ -125,17 +130,6 @@ const MainImage = styled.img`
 const First = styled.div`
 	display: flex;
 	margin-top: 50px;
-`;
-const AuthImage = styled.div``;
-const Name = styled.div``;
-const But = styled.div`
-	height: 30px;
-	width: 120px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: silver;
-	border-radius: 5px;
 `;
 
 const Container = styled.div`
