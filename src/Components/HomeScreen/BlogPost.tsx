@@ -156,3 +156,65 @@ const TitleHold = styled.div`
 	}
 	/* display: none; */
 `;
+const ImageHolder = styled.div`
+	height: 200px;
+	width: 100%;
+	background-color: silver;
+	position: relative;
+	cursor: pointer;
+	border-radius: 5px;
+`;
+const DownPart = styled.div`
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 10px;
+	&:hover ~ ${HoverCard} {
+		display: flex;
+	}
+`;
+const Cont = styled.div`
+	position: absolute;
+	height: 200px;
+	width: 100%;
+	/* background-color: red; */
+	top: 0;
+`;
+const Button = styled.div`
+	margin: 10px;
+	background-color: #302f3e;
+	width: 130px;
+	height: 35px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	border-radius: 20px;
+`;
+
+const AuthorImage = styled.div<{col: string}>`
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: ${(props) => props.col};
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	font-weight: bold;
+	margin-right: 10px;
+`;
+const AuthName = styled.div`
+	font-weight: bold;
+	color: black;
+`;
+const ViewIcon = styled.div`
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+	color: gray;
+	span {
+		color: black;
+	}
+`;
