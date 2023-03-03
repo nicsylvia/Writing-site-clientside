@@ -28,55 +28,113 @@ const Hero = () => {
 					<GlobalButton text='Mobile' />
 				</ButtonHold>
 
-				<h2>
-					{" "}
-					Explore the world’s leading Books <br /> and Authors
-				</h2>
-				<p>
-					Millions of designers and agencies around the world showcase their
-					portfolio work on Dribbble - the home to the world’s best design and
-					creative professionals.
-				</p>
-
-				<InputHold>
-					<Icon>
-						<AiOutlineSearch />
-					</Icon>
-					<Input placeholder='Search by author name' />
-				</InputHold>
+				<Maintext>
+                    <h3>Explore Augustine's Blog Posts</h3>
+                    <p>Augustine Writes </p>
+                    <InputField>
+                        <input type="search" placeholder = "Search by blog tittle" />
+                        <Search>Search</Search>
+                        </InputField>
+  
+                </Maintext>
 			</Content>
 		</Container>
-    </Container>
     </div>
   )
 }
 
 export default Hero;
 
-const Input = styled.input`
-background-color: transparent;
-border: none;
-outline: none;
-flex: 1;
+const Maintext = styled.div`
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  height : 100vh;
+  width : 100%;
+  z-index: 1;
+  color : white;
+  h3{
+    font-size: 50px;
+    margin: 0;
+  }
+  p{
+    font-size: 20px;
+    margin: 0;
+    margin-top: 5px;
+  }
+  @media screen and (max-width: 768px) {
+    p{
+      font-size: 18px;
+      /* background-color: black; */
+    }
+  }
+  @media screen and (max-width: 425px) {
+    h3{
+      font-size: 30px;
+    }
+    p{
+      /* font-size: 12px; */
+      width: 280px;
+      /* background-color: red; */
+    }
+  }
 `;
-
-const InputHold = styled.div`
-display: flex;
-align-items: center;
-height: 50px;
-width: 350px;
-background-color: white;
-color: black;
-border-radius: 25px;
-
-@media screen and (max-width: 500px) {
-    width: 280px;
-}
+const InputField = styled.div`
+  display: flex;
+  width: 650px;
+  padding: 10px 0px 10px 0px;
+  align-items: center;
+  justify-content: space-around;
+  font-weight: 500;
+  margin-top: 10px;
+  /* background-color: blue; */
+  input{
+    width: 500px;
+    padding: 15px 0px 15px 0px;
+    /* height: 50px; */
+    border-radius: 30px;
+    background-color: white;
+    outline: 0;
+    border: 0;
+    padding-left: 30px;
+  }
+  @media screen and (max-width: 768px) {
+    width: 450px;
+    input{
+      @media screen and (max-width: 768px) {
+      width: 300px;
+  }
+    }
+  }
+  @media screen and (max-width: 425px) {
+    width: 310px;
+    /* background-color: blue; */
+    input{
+      @media screen and (max-width: 425px) {
+      width: 220px;
+  }
+    }
+  }
 `;
-const Icon = styled.div`
-margin-left: 10px;
-margin-right: 10px;
-font-size: 20px;
+const Search = styled.div`
+  width: 120px;
+  padding: 15px 0px 15px 0px;
+  /* height: 50px; */
+  border-radius: 30px;
+  background-color: #005555;
+  color: #F2F6F6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  @media screen and (max-width: 425px) {
+    width: 80px;
+    padding: 10px 0px 10px 0px;
+  }
 `;
 
 const ButtonHold = styled.div`
@@ -130,8 +188,8 @@ const Video = styled.video`
 	object-fit: cover;
 `;
 const Container = styled.div`
-	height: 450px;
 	width: 100%;
+    height: calc(100vh - 70px);
 	position: relative;
 	display: flex;
 	justify-content: center;
