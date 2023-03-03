@@ -23,6 +23,19 @@ const MainBlog = () => {
 						</Cont>
 					</ImageHolder>
 
+                    <DownPart>
+					<Hold>
+						<AuthorImage>
+                            <Img src = {brother} />
+                        </AuthorImage>
+						<AuthName>Augustine Adimike</AuthName>
+					</Hold>
+					<ViewIcon>
+						<AiOutlineEye />
+						<span>0K</span>
+					</ViewIcon>
+				</DownPart>
+
     </div>
   )
 }
