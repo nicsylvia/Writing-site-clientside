@@ -127,4 +127,28 @@ p {
     }
 }
 `;
+const Video = styled.video`
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+`;
+const Container = styled.div`
+	height: 450px;
+	width: 100%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	/* align-items: center; */
+	color: white;
+	/* padding-bottom: 30px; */
+
+	::before {
+		content: "";
+		background-color: rgba(0, 0, 0, 0.83);
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		/* padding-bottom: 20px; */
+	}
+`;
 
