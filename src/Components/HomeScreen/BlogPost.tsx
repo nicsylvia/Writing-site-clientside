@@ -32,6 +32,23 @@ const BlogPost = () => {
 						<span>19K</span>
 					</ViewIcon>
 				</DownPart>
+
+                <HoverCard>
+				<First>
+					<Hold>
+						<AuthorImage col={
+							"#" + Math.floor(Math.random() * 10000000).toString(16).padStart(6)
+						} >{books.authorImage}</AuthorImage>
+						<AuthName>{books.author}</AuthName>
+					</Hold>
+					<But>+ View</But>
+				</First>
+				<Second>
+					<MainImage src={books.coverImage} />
+					<MainImage src={books.coverImage} />
+					<MainImage src={books.coverImage} />
+				</Second>
+			</HoverCard>
 			
     </div>
   )
