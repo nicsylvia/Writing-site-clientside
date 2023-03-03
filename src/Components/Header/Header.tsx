@@ -98,7 +98,7 @@ const NavSide = styled.div`
     }
 `;
 const Wrap = styled.div`
-    background-color: rgba(0, 0, 0, 0.747);
+    background-color: rgba(50, 145, 201, 0.747);
     backdrop-filter: blur(2px);
     width: 400px;
     height: 85vh;

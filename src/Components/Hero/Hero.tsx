@@ -19,13 +19,13 @@ const Hero = () => {
 
 			<Content>
 				<ButtonHold>
-					<GlobalButton text='Discover' />
-					<GlobalButton text='Animation' />
+					<GlobalButton text='Religion' />
+					<GlobalButton text='Universalism' />
 					<GlobalButton text='Branding' />
 					<GlobalButton text='Illustration' />
-					<GlobalButton text='Mobile' />
-					<GlobalButton text='Mobile' />
-					<GlobalButton text='Mobile' />
+					<GlobalButton text='Worth' />
+					<GlobalButton text='Knowledge' />
+					<GlobalButton text='Rest' />
 				</ButtonHold>
 
 				<h3>Explore Augustine's Blog Posts</h3>
@@ -152,7 +152,7 @@ const Video = styled.video`
 `;
 const Container = styled.div`
 	width: 100%;
-  height: calc(100vh - 70px);
+     height: calc(100vh - 70px);
 	position: relative;
 	display: flex;
 	justify-content: center;
