@@ -7,7 +7,23 @@ import brother from "../Assets/brother.png";
 
 const MainBlog = () => {
   return (
-    <div>MainBlog</div>
+    <div>
+        <div>
+        <Container>
+          <Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
+		  		<Card>
+					<ImageHolder>
+						<Image src={universalism} />
+						<Cont>
+							<Button>Religion</Button>
+
+							<TitleHold>
+								<Title>Universalism as a religion?</Title>
+							</TitleHold>
+						</Cont>
+					</ImageHolder>
+
+    </div>
   )
 }
 
