@@ -1,13 +1,8 @@
-// const UsersEndpoint = "https://api-augustine-blog.onrender.com",
+import axios from "axios";
 
-// const BlogsEndpoint = "https://api-augustine-blog.onrender.com"
+const Endpoint = "https://api-augustine-blog.onrender.com"
 
-import React from 'react'
-
-const APIs = () => {
-  return (
-    <div>APIs</div>
-  )
+// Search by tittle endpoints:
+export const SearchTittle = async() =>{
+  await axios.get(`${Endpoint}/search-for-blog-post`)
 }
-
-export default APIs
