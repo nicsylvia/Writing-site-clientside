@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState} from 'react'
 import styled from 'styled-components';
 import herovideo from "../Assets/heroVideo.mp4";
 import { AiOutlineSearch } from "react-icons/ai";
 import GlobalButton from '../GlobalButtons/GlobalButtons';
+import { useQuery } from '@tanstack/react-query';
+import { SearchTittle } from '../ApiCalls/APIs';
 
 const Hero = () => {
+
+  // Search by tittle:
+  
+
   return (
     <div>
         <Container>
@@ -34,7 +40,8 @@ const Hero = () => {
 				</p>
 
                 <InputField>
-                    <input type="search" placeholder = "Search by blog tittle" />
+                    <input type="search"
+                    placeholder = "Search by blog tittle" />
                     <Search>Search</Search>
                 </InputField>
 			</Content>
