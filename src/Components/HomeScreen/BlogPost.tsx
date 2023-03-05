@@ -4,57 +4,70 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import universalism from "../Assets/universalism.png"
 import brother from "../Assets/brother.png";
+import { useQuery } from "@tanstack/react-query";
+import { GetAllBlogPost } from "../ApiCalls/APIs";
 
 const BlogPost = () => {
+
+	// Get all blog post:
+	const AllBlogPost = useQuery({
+		queryKey: ["AllBlogs"],
+		queryFn: GetAllBlogPost
+	  }) 
+
   return (
     <div>
-        <Container>
-          <Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
-		  		<Card>
-					<ImageHolder>
-						<Image src={universalism} />
-						<Cont>
-							<Button>Religion</Button>
+        {
+			AllBlogPost?.data?.map((post: any) =>(
+				<Container key={post._id}>
+					<Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
+							<Card>
+								<ImageHolder>
+									<Image src={universalism} />
+									<Cont>
+										<Button>Religion</Button>
 
-							<TitleHold>
-								<Title>Universalism as a religion?</Title>
-							</TitleHold>
-						</Cont>
-					</ImageHolder>
+										<TitleHold>
+											<Title>Universalism as a religion?</Title>
+										</TitleHold>
+									</Cont>
+								</ImageHolder>
 
-                    <DownPart>
-					<Hold>
-						<AuthorImage>
-                            <Img src = {brother} />
-                        </AuthorImage>
-						<AuthName>Augustine Adimike</AuthName>
-					</Hold>
-					<ViewIcon>
-						<AiOutlineEye />
-						<span>0K</span>
-					</ViewIcon>
-				</DownPart>
+								<DownPart>
+								<Hold>
+									<AuthorImage>
+										<Img src = {brother} />
+									</AuthorImage>
+									<AuthName>Augustine Adimike</AuthName>
+								</Hold>
+								<ViewIcon>
+									<AiOutlineEye />
+									<span>0K</span>
+								</ViewIcon>
+							</DownPart>
 
-                <HoverCard>
-				<First>
-					<Hold>
-                    <AuthorImage>
-                            <Img src = {brother} />
-                    </AuthorImage>
-						<AuthName>Augustine Adimike</AuthName>
-					</Hold>
-					<But>+ View</But>
-				</First>
-				<Second>
-					<MainImage src={universalism} />
-					<MainImage src={universalism} />
-					<MainImage src={universalism} />
-				</Second>
-			</HoverCard>
+							<HoverCard>
+							<First>
+								<Hold>
+								<AuthorImage>
+										<Img src = {brother} />
+								</AuthorImage>
+									<AuthName>Augustine Adimike</AuthName>
+								</Hold>
+								<But>+ View</But>
+							</First>
+							<Second>
+								<MainImage src={universalism} />
+								<MainImage src={universalism} />
+								<MainImage src={universalism} />
+							</Second>
+						</HoverCard>
 
-            </Card>
-		  </Link>
+						</Card>
+					</Link>
 		</Container>
+			))
+		}
 			
     </div>
   )
