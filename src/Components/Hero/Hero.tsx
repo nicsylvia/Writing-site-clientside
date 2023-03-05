@@ -4,13 +4,24 @@ import herovideo from "../Assets/heroVideo.mp4";
 import { AiOutlineSearch } from "react-icons/ai";
 import GlobalButton from '../GlobalButtons/GlobalButtons';
 import { useQuery } from '@tanstack/react-query';
-import { SearchTittle } from '../ApiCalls/APIs';
+import { GetAllBlogPost, SearchTittle } from '../ApiCalls/APIs';
+import { useMutation } from '@tanstack/react-query';
 
 const Hero = () => {
 
   // Search by tittle:
-  
+  const TittleSearch = useMutation({
+    mutationKey: ["Tittlesearch"],
+    mutationFn: SearchTittle
+  })
 
+  const [blogname, setTittle] = useState("")
+
+  const search = () =>{
+    TittleSearch.mutate({blogname})
+  }
+
+  console.log("This is search:", TittleSearch)
   return (
     <div>
         <Container>
@@ -41,8 +52,11 @@ const Hero = () => {
 
                 <InputField>
                     <input type="search"
+                    onChange={(e) =>{
+                      setTittle(e.target.value)
+                    }}
                     placeholder = "Search by blog tittle" />
-                    <Search>Search</Search>
+                    <Search onClick={search}>Search</Search>
                 </InputField>
 			</Content>
 		</Container>
