@@ -1,11 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import universalism from "../Assets/universalism.png"
+import { Link} from "react-router-dom";
 import brother from "../Assets/brother.png";
 import { useQuery } from "@tanstack/react-query";
-import { GetAllBlogPost } from "../ApiCalls/APIs";
+import { GetAllBlogPost, GetSinglePost } from "../ApiCalls/APIs";
 import { BallTriangle } from "react-loader-spinner";
 
 const BlogPost = () => {
@@ -14,7 +13,7 @@ const BlogPost = () => {
 	const AllBlogPost = useQuery({
 		queryKey: ["AllBlogs"],
 		queryFn: GetAllBlogPost
-	  }) 
+	  })
 
   return (
     <div>
@@ -25,7 +24,7 @@ const BlogPost = () => {
 		<Container>
 						{
 							AllBlogPost?.data?.data.map((post: any) =>(
-								<Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
+								<Link to={`/blogdetails/${post._id}`} style = {{textDecoration: "none"}}>
 								<Card key={post._id}>
 								<ImageHolder>
 									<Image src={post.blogimage} />
@@ -62,9 +61,9 @@ const BlogPost = () => {
 								<But>+ View</But>
 							</First>
 							<Second>
-								<MainImage src={universalism} />
-								<MainImage src={universalism} />
-								<MainImage src={universalism} />
+								<MainImage src={post.blogimage} />
+								<MainImage src={post.blogimage} />
+								<MainImage src={post.blogimage} />
 							</Second>
 						</HoverCard>
 

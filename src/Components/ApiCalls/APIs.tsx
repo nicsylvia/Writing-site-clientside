@@ -12,3 +12,8 @@ export const SearchTittle = async({blogname}: any) =>{
 export const GetAllBlogPost = async() =>{
   return await axios.get(`${Endpoint}/api/blog/all-blog-posts`).then((res) => res.data)
 }
+
+// Get single blog post:
+export const GetSinglePost = async(blogID: string) =>{
+  return await axios.get(`${Endpoint}/api/blog/single-blog-post/${blogID}`)
+}
