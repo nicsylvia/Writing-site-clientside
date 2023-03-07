@@ -23,17 +23,17 @@ const BlogPost = () => {
 		}
        
 		<Container>
-				{
-					AllBlogPost?.data?.data?.map((post: any) =>(
-					<Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
-							<Card key={post._id}>
+						{
+							AllBlogPost?.data?.data.map((post: any) =>(
+								<Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
+								<Card key={post._id}>
 								<ImageHolder>
-									<Image src={universalism} />
+									<Image src={post.blogimage} />
 									<Cont>
-										<Button>{post.blogcategory }</Button>
+										<Button>{post.blogcategory}</Button>
 
 										<TitleHold>
-											<Title>Universalism as a religion?</Title>
+											<Title>{post.blogname}</Title>
 										</TitleHold>
 									</Cont>
 								</ImageHolder>
@@ -70,10 +70,9 @@ const BlogPost = () => {
 
 						</Card>
 					</Link>
-}					
+							))
+						}			
 		</Container>
-			))
-		}
 			
     </div>
   )
