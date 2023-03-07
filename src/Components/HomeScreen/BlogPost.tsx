@@ -24,7 +24,7 @@ const BlogPost = () => {
 		<Container>
 						{
 							AllBlogPost?.data?.data.map((post: any) =>(
-								<Link to={`/blogdetails/${post._id}`} style = {{textDecoration: "none"}}>
+								<Link to={`/single-blog-post/${post._id}`} style = {{textDecoration: "none"}}>
 								<Card key={post._id}>
 								<ImageHolder>
 									<Image src={post.blogimage} />

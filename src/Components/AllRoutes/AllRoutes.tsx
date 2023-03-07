@@ -29,7 +29,7 @@ const AllRoutes = () => {
             element: <ContactScreen />
         },
         {
-            path: "/single-blog-post",
+            path: "/single-blog-post/:id",
             element: <SinglePageScreen />
         },
         {
