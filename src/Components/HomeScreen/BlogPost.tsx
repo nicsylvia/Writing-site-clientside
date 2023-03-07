@@ -6,6 +6,7 @@ import universalism from "../Assets/universalism.png"
 import brother from "../Assets/brother.png";
 import { useQuery } from "@tanstack/react-query";
 import { GetAllBlogPost } from "../ApiCalls/APIs";
+import { BallTriangle } from "react-loader-spinner";
 
 const BlogPost = () => {
 
@@ -14,18 +15,21 @@ const BlogPost = () => {
 		queryKey: ["AllBlogs"],
 		queryFn: GetAllBlogPost
 	  }) 
-
+	  console.log("All Blogs: ", AllBlogPost?.data?.data)
   return (
     <div>
+		{
+			AllBlogPost?.isLoading ? <BallTriangle /> : null
+		}
         {
-			AllBlogPost?.data?.map((post: any) =>(
+			AllBlogPost?.data?.data?.map((post: any) =>(
 				<Container key={post._id}>
 					<Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
 							<Card>
 								<ImageHolder>
 									<Image src={universalism} />
 									<Cont>
-										<Button>Religion</Button>
+										<Button>{post.blogcategory }</Button>
 
 										<TitleHold>
 											<Title>Universalism as a religion?</Title>
