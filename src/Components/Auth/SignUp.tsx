@@ -1,12 +1,15 @@
-import { styled } from '@tanstack/react-query-devtools/build/lib/utils';
 import React from 'react'
-import logo from "../Assets/logo.png"
+import styled from 'styled-components';
+import green from "../Assets/green.png"
+import blue from "../Assets/blue.png"
+import purple from "../Assets/purple.png"
+import logo from "../Assets/logo-white.svg"
 import { Link } from "react-router-dom"
 
-const SignUp = () => {
+const SignIn = () => {
   return (
     <div>
-       <Container>
+        <Container>
             <Wrapper>
                 <Logo to = "/">
                     <MyLogo src={logo} />
@@ -63,7 +66,7 @@ const SignUp = () => {
   )
 }
 
-export default SignUp;
+export default SignIn;
 
 const Container = styled.div`
     width: 100%;
