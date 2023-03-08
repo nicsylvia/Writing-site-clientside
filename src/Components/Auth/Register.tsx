@@ -121,8 +121,6 @@ const Password = styled.div`
     }
     option{
         color: black;
-        overflow-y: scroll;
-        height: 50px;
         cursor: pointer;
     }
 

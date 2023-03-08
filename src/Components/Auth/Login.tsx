@@ -8,14 +8,19 @@ const Login = () => {
   return (
     <Container>
       <Wrapper>
-        <h4>sign in.</h4>
+        <h4>Login.</h4>
         <Input
-          placeholder="sannidamilola@example.com"
+          placeholder="augustinewrites@example.com"
         />{" "}
         <br />
-        <Button type="submit">Signin</Button>
+
+        <Input
+          placeholder="Password"
+        />{" "}
+        <br />
+        <Button type="submit">Login</Button>
         <SignUP>
-          <p>dont have an account ?</p>{" "}
+          <p>Dont have an account ?</p>{" "}
           <Link style={{ textDecoration: "none" }} to={"/"}>
             <b>Sign Up</b>
           </Link>
