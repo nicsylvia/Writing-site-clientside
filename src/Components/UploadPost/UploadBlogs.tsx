@@ -135,8 +135,8 @@ const Select = styled.select`
 	width: 370px;
 	height: 30px;
 	border-radius: 3px;
-	border: 0.7px solid silver;
-	outline-color: #f8cbe0;
+	border: 0.7px solid purple;
+	outline-color: purple;
 	padding-left: 10px;
 `;
 
@@ -144,8 +144,8 @@ const TexArea = styled.textarea`
 	width: 350px;
 	height: 70px;
 	border-radius: 3px;
-	border: 0.7px solid silver;
-	outline-color: #f8cbe0;
+	border: 0.7px solid purple;
+	outline-color: purple;
 	padding-left: 10px;
 	resize: none;
 `;
@@ -155,8 +155,8 @@ const Inp = styled.input`
 	width: 350px;
 	height: 30px;
 	border-radius: 3px;
-	border: 0.7px solid silver;
-	outline-color: #f8cbe0;
+	border: 0.7px solid purple;
+	outline-color: purple;
 	padding-left: 10px;
 `;
 
@@ -166,7 +166,7 @@ const Input = styled.input`
 const Button = styled.label`
 	height: 40px;
 	width: 200px;
-	background-color: black;
+	background-color: purple;
 	color: white;
 	display: flex;
 	justify-content: center;
@@ -186,7 +186,7 @@ const Circle = styled.div`
 	width: 250px;
 	border-radius: 5px;
 	/* border-radius: 50%; */
-	background-color: #e6e4e4;
+	background-color: purple;
 	display: flex;
 	justify-content: center;
 	align-items: center;
