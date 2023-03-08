@@ -5,17 +5,31 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Register = () => {
+  const [show, setShow] = useState(false);
+  const eye = () => {
+    setShow(!show);
+  };
 
   return (
     <Container>
-      <Wrapper>
+      <Wrapper onSubmit={registerUser}>
         <h4>sign up.</h4>
         <Input
+          required
+          value={name}
+          onChange={(e) => {
+            setName(e.target.value);
+          }}
           type={"text"}
           placeholder="name"
         />{" "}
         <br />
         <Input
+          required
+          value={email}
+          onChange={(e) => {
+            setEmail(e.target.value);
+          }}
           type={"email"}
           placeholder="sannidamilola@example.com"
         />{" "}
