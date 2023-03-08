@@ -23,7 +23,10 @@ const Header = () => {
           <Wrapper>
             <WrapAll>
               <Logo to = "/">
-                <Img src={logo} />
+                {/* <Img src={logo} /> */}
+                <h3>
+                    28 Writes
+                </h3>
               </Logo>
               <Navigation>
                   <Nav  to = "/"  cc = "white">Home</Nav>
@@ -138,7 +141,6 @@ const Wrapper = styled.div`
 `;
 const Logo = styled(Link)`
     cursor: pointer;
-    font-size: 30px;
     width: 100px;
     height: 70px;
     font-weight: bold;

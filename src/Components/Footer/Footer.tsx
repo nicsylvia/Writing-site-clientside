@@ -84,7 +84,7 @@ const Container = styled.div`
   padding-bottom: 30px;
 `;
 const Wrapper = styled.div`
-  width: 80%;
+  width: 90%;
   height: 100%;
   display: flex;
   justify-content: center;

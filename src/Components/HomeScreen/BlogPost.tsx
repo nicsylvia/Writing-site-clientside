@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Link} from "react-router-dom";
 import brother from "../Assets/brother.png";
 import { useQuery } from "@tanstack/react-query";
-import { GetAllBlogPost, GetSinglePost } from "../ApiCalls/APIs";
+import { GetAllBlogPost } from "../ApiCalls/APIs";
 import { BallTriangle } from "react-loader-spinner";
 
 const BlogPost = () => {
