@@ -49,7 +49,7 @@ const Register = () => {
 
         <Password>
         <select>
-                <option>Click to Select</option>
+                <option>How did you hear about us?</option>
                 <option>Facebook</option>
                 <option>Twitter</option>
                 <option>Instagram</option>
@@ -105,6 +105,16 @@ const Password = styled.div`
   width: 320px;
   border-radius: 12px;
   justify-content: space-between;
+
+  select{
+    width: 100%;
+    height: 70px;
+    background-color: #EDF2F7;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    }
 
   @media screen and (max-width: 500px) {
     width: 250px;
