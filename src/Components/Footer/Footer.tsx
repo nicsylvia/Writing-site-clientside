@@ -30,13 +30,13 @@ const Footer = () => {
           <Icon href="https://web.facebook.com/sanni.sundayemmanuel">
             <AiFillFacebook />
           </Icon>
-          <Icon>
+          <Icon href="">
             <AiFillTwitterSquare />
           </Icon>
-          <Icon>
+          <Icon href="">
             <AiFillGoogleSquare />
           </Icon>
-          <Icon href="https://wa.me/2348185340527">
+          <Icon href="https://wa.me/234907206326">
             <BsWhatsapp />
           </Icon>
         </Social>
