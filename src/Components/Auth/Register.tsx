@@ -17,14 +17,14 @@ const Register = () => {
 
         <Input
           type={"text"}
-          placeholder="name"
+          placeholder="Enter your name"
         />{" "}
         <br />
 
         <Input
           required
           type={"email"}
-          placeholder="sannidamilola@example.com"
+          placeholder="augustinewrites@example.com"
         />{" "}
         <br />
         
@@ -47,22 +47,7 @@ const Register = () => {
         </Password>
         <br />
 
-        <Div>
-            <h4>How Did You Hear About Us? (Optional)</h4>
-            <select>
-                <option>Click to Select</option>
-                <option>Facebook</option>
-                <option>Twitter</option>
-                <option>Instagram</option>
-                <option>Friend/Family/Co Worker Referrer</option>
-                <option>Google Search</option>
-                <option>Google PlayStore</option>
-                <option>Online Blog</option>
-                <option>Local Newspaper</option>
-                <option>At an event</option>
-                <option>Others</option>
-            </select>
-        </Div>
+        <Password></Password>
 
         <Button type="submit">SignUp</Button>
 
@@ -80,25 +65,6 @@ const Register = () => {
 
 export default Register;
 
-const Div = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin: 10px 0px 10px 0px;
-    h4{
-        margin: 0;
-        margin-bottom: 5px;
-        text-align: start;
-    }
-    select{
-    width: 450px;
-    height: 70px;
-    background-color: #EDF2F7;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    font-size: 20px;
-    }
-`;
 const InputPassword = styled.input`
   outline: none;
   background-color: transparent;
@@ -213,7 +179,7 @@ const SignUP = styled.div`
   }
 `;
 const Button = styled.button`
-  background-color: #eb72bb;
+  background-color: purple;
   border: 0;
   width: 320px;
   border-radius: 12px;
