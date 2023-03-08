@@ -16,8 +16,8 @@ const GlobalButton: React.FC<Iprops> = ({text}) => {
 export default GlobalButton;
 
 const Button = styled.button`
-    background-color: #87CEEB;
-    color: black;
+    background-color: #181820;
+    color: white;
     border: none;
     font-weight: bold;
     outline: none;
@@ -31,7 +31,7 @@ const Button = styled.button`
     cursor: pointer;
     :hover{
         transform: scale(0.95);
-        color: #87CEEB;
+        color: purple;
         background-color: white;
     }
 `;

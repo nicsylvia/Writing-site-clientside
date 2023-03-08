@@ -81,8 +81,8 @@ const InputField = styled.div`
     /* height: 50px; */
     border-radius: 30px;
     background-color: white;
-    outline: 0;
-    border: 0;
+    outline: purple;
+    border: 1px solid purple;
     padding-left: 30px;
   }
   @media screen and (max-width: 768px) {
@@ -108,8 +108,8 @@ const Search = styled.div`
   padding: 15px 0px 15px 0px;
   /* height: 50px; */
   border-radius: 30px;
-  background-color: #87CEEB;
-  color: black;
+  background-color: purple;
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;

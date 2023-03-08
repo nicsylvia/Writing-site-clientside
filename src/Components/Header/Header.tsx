@@ -26,9 +26,9 @@ const Header = () => {
                 <Img src={logo} />
               </Logo>
               <Navigation>
-                  <Nav  to = "/"  cc = "black">Home</Nav>
-                  <Nav  to = "/send-me-a-message" cc = "black">Contact Me</Nav>
-                  <Nav to = "/all-blogs"  cc = "black">Blogs</Nav>
+                  <Nav  to = "/"  cc = "white">Home</Nav>
+                  <Nav  to = "/send-me-a-message" cc = "white">Contact Me</Nav>
+                  <Nav to = "/all-blogs"  cc = "white">Blogs</Nav>
               </Navigation>
             </WrapAll>
             <Buttons>
@@ -116,7 +116,7 @@ const Container = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: skyblue;
+    background-color: #181820;
     color: white;
     z-index: 999;
     span{
@@ -189,7 +189,7 @@ const Buttons = styled.div`
 const Login = styled(Link)`
     margin-right: 10px;
     cursor: pointer;
-    background-color: black;
+    background-color: purple;
     padding: 10px 15px;
     border-radius: 5px;
     text-decoration: none;
@@ -206,7 +206,7 @@ const SignUp = styled(Link)`
     cursor: pointer;
     color: white;
     text-decoration: none;
-    background-color: black;
+    background-color: purple;
     padding: 10px 15px;
     border-radius: 5px;
     @media screen and (max-width: 500px) {
