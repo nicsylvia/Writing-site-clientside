@@ -80,6 +80,8 @@ const Register = () => {
 
 export default Register;
 
+const Div = styled.div``;
+
 const InputPassword = styled.input`
   outline: none;
   background-color: transparent;
