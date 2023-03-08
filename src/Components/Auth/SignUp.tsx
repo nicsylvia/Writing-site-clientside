@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import green from "../Assets/green.png"
 import blue from "../Assets/blue.png"
 import purple from "../Assets/purple.png"
-import logo from "../Assets/logo-white.svg"
+import logo from "../Assets/logo.png"
 import { Link } from "react-router-dom"
 
-const SignIn = () => {
+const SignUp = () => {
   return (
     <div>
         <Container>
@@ -16,8 +16,8 @@ const SignIn = () => {
                 </Logo>
                 <RegisterCard>
                     <Wrap>
-                        <h2>Create a Secure Account</h2>
-                        <p>Welcome to the future of Savings & Investments</p>
+                        <h2> Sign up to have your own account</h2>
+                        <p>28 Writes</p>
                         <Form>
                             <Div>
                                 <h4>Full Name</h4>
@@ -28,16 +28,8 @@ const SignIn = () => {
                                 <Input placeholder = "Email Address" type = "email" />
                             </Div>
                             <Div>
-                                <h4>Phone Number</h4>
-                                <Input placeholder = "Phone Number" type="number" />
-                            </Div>
-                            <Div>
                                 <h4>Password</h4>
                                 <Input placeholder = "Password" type="Password" />
-                            </Div>
-                            <Div>
-                                <h4>Referrer Phone or Promo Code (Optional)</h4>
-                                <Input placeholder = "Referrer Phone or Code" />
                             </Div>
                             <Div>
                                 <h4>How Did You Hear About Us? (Optional)</h4>
@@ -55,8 +47,10 @@ const SignIn = () => {
                                     <option>Others</option>
                                 </select>
                             </Div>
-                            <Button>CREATE ACCOUNT</Button>
-                        </Form>
+                            <BtnWrap to = "/login">
+                            <Button> CREATE ACCOUNT</Button>
+  
+                            </BtnWrap>                        </Form>
                     </Wrap>
                 </RegisterCard>
                 <P to = "/login">Already have an account? Log In</P>
@@ -66,12 +60,12 @@ const SignIn = () => {
   )
 }
 
-export default SignIn;
+export default SignUp;
 
 const Container = styled.div`
     width: 100%;
     padding: 10px 0px 10px 0px;
-    background-color: #062863;
+    background-color: skyblue;
     background-image: url(${blue}), url(${green}), url(${purple});
     background-repeat: no-repeat;
     background-size: 15%;
@@ -90,9 +84,19 @@ const Wrapper = styled.div`
     flex-direction: column;
 `;
 const Logo = styled(Link)`
-    margin: 20px 0px 40px 0px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 200px;
+    height: 70px;
+    font-weight: bold;
 `;
-const MyLogo = styled.img``;
+const MyLogo = styled.img`
+  width: 100%;
+  height: 100%;
+  margin-right: 50px;
+  object-fit: contain;
+  /* background-color: green; */
+`;
 const RegisterCard = styled.div`
     width: 550px;
     /* height: 600px; */
@@ -109,8 +113,12 @@ const Wrap = styled.div`
     margin-top: 50px;
     text-align: center;
     h2{
-        color: #062863;
+        color: skyblue;
         margin: 0;
+    }
+    p{
+      font-weight: bold;
+      font-style: italic;
     }
 `;
 const Form = styled.form`
@@ -144,6 +152,9 @@ const Div = styled.div`
     outline: none;
     font-size: 20px;
     }
+`;
+const BtnWrap = styled(Link)`
+  text-decoration: none;
 `;
 const Button = styled.button`
     background-color: #062B6F;
