@@ -2,39 +2,14 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import axios from "axios";
-import { accessContest } from "../Global/GlobalContext";
 
-const SignIn = () => {
-  const [email, setEmail] = React.useState("");
-
-  const context = React.useContext(accessContest);
-
-  const navigate = useNavigate();
-  const signIn = async (e: any) => {
-    e.preventDefault();
-    await axios
-      .post("https://bootcamp-47qt.onrender.com/api/login", { email })
-      .then((res) => {
-        window.localStorage.setItem("userData", JSON.stringify(res.data.data));
-        navigate("/sidebar");
-        context?.setData(res.data.data);
-      })
-      .catch((err) => {
-        alert("User Not Found");
-      });
-  };
+const Login = () => {
 
   return (
     <Container>
-      <Wrapper onSubmit={signIn}>
+      <Wrapper>
         <h4>sign in.</h4>
         <Input
-          required
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
-          type={"email"}
           placeholder="sannidamilola@example.com"
         />{" "}
         <br />
@@ -50,7 +25,7 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default Login;
 
 const Password = styled.div`
   display: flex;
