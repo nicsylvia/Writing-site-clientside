@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import green from "../Assets/green.png"
 import blue from "../Assets/blue.png"
 import purple from "../Assets/purple.png"
-import logo from "../Assets/logo.png"
 import { Link } from "react-router-dom"
 
 const SignUp = () => {
@@ -61,7 +60,8 @@ export default SignUp;
 
 const Container = styled.div`
     width: 100%;
-    padding: 10px 0px 10px 0px;
+    height: 100vh;
+    /* padding: 10px 0px 10px 0px; */
     background-color: skyblue;
     background-image: url(${blue}), url(${green}), url(${purple});
     background-repeat: no-repeat;
@@ -82,17 +82,18 @@ const Wrapper = styled.div`
 `;
 const RegisterCard = styled.div`
     width: 550px;
-    /* height: 600px; */
     /* padding: 10px 0px 10px 0px; */
-    background-color: yellow;
+    /* background-color: yellow; */
     border-radius: 20px 20px 20px 0px;
     display: flex;
     justify-content: center;
 `;
 const Wrap = styled.div`
-    width: 450px;
-    padding: 10px 0px 10px 0px;
-    background-color: red;
+    width: 500px;
+    height: 500px;
+    overflow-y: scroll;
+    /* padding: 10px 0px 10px 0px; */
+    /* background-color: red; */
     margin-top: 50px;
     text-align: center;
     h2{
