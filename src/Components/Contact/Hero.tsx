@@ -33,7 +33,7 @@ const Container = styled.div`
         content: "";
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.83);
+        background-color: #181820b7;
         position: absolute;
     }
 `;

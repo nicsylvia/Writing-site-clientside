@@ -85,7 +85,7 @@ const Hamburger = styled.div`
 const Cancel = styled.div`
     font-size: 30px;
     display: none;
-    color: black;
+    color: white;
     cursor: pointer;
     margin-right: 10px;
     @media screen and (max-width: 500px) {
@@ -102,7 +102,7 @@ const NavSide = styled.div`
     }
 `;
 const Wrap = styled.div`
-    background-color: rgba(50, 145, 201, 0.747);
+    background-color: #181820b7;
     backdrop-filter: blur(2px);
     width: 400px;
     height: 85vh;
@@ -148,6 +148,9 @@ const Logo = styled(Link)`
     text-decoration: none;
     color: white;
     font-style: italic;
+    @media screen and (max-width: 500px) {
+        margin-left: 15px;
+    }
 `;
 const WrapAll = styled.div`
   /* background-color: orange; */
