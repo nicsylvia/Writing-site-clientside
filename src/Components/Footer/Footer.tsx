@@ -107,7 +107,7 @@ const Logo = styled.div`
   font-family: serif;
   color: white;
   border: 4px solid purple;
-  padding: 5px;
+  padding: 10px;
 
   @media screen and (max-width: 500px) {
     padding: 1px;

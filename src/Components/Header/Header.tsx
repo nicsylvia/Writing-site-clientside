@@ -75,7 +75,7 @@ export default Header;
 const Hamburger = styled.div`
     font-size: 30px;
     display: none;
-    color: black;
+    color: white;
     cursor: pointer;
     margin-right: 10px;
     @media screen and (max-width: 500px) {
