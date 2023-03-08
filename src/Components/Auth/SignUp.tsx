@@ -11,9 +11,6 @@ const SignUp = () => {
     <div>
         <Container>
             <Wrapper>
-                {/* <Logo to = "/">
-                    <MyLogo src={logo} />
-                </Logo> */}
                 <RegisterCard>
                     <Wrap>
                         <h2> Sign up to have your own account</h2>
@@ -82,20 +79,6 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-`;
-const Logo = styled(Link)`
-    cursor: pointer;
-    font-size: 30px;
-    width: 200px;
-    height: 70px;
-    font-weight: bold;
-`;
-const MyLogo = styled.img`
-  width: 100%;
-  height: 100%;
-  margin-right: 50px;
-  object-fit: contain;
-  /* background-color: green; */
 `;
 const RegisterCard = styled.div`
     width: 550px;
