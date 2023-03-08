@@ -9,6 +9,7 @@ import universalism from "../Assets/universalism.png"
 const SingleBlog = () => {
 
 	const {blogid} = useParams()
+	console.log("This is ID", blogid)
 
 	//   Get single post:
 	const SingleBlogPost = useQuery({
