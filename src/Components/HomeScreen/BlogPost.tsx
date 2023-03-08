@@ -17,11 +17,11 @@ const BlogPost = () => {
 
   return (
     <div>
+       
+		<Container>
 		{
 			AllBlogPost?.isLoading ? <BallTriangle /> : null
 		}
-       
-		<Container>
 						{
 							AllBlogPost?.data?.data.map((post: any) =>(
 								<Link to={`/single-blog-post/${post._id}`} style = {{textDecoration: "none"}}>
@@ -141,7 +141,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	background-color: red;
+	/* background-color: red; */
 	/* align-items: center; */
 `;
 const Card = styled.div`

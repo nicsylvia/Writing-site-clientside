@@ -81,8 +81,8 @@ const InputField = styled.div`
     /* height: 50px; */
     border-radius: 30px;
     background-color: white;
-    outline: purple;
-    border: 1px solid purple;
+    border: 0.7px solid purple;
+	  outline-color: purple;
     padding-left: 30px;
   }
   @media screen and (max-width: 768px) {
