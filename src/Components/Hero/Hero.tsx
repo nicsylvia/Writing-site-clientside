@@ -24,7 +24,7 @@ const Hero = () => {
   console.log("This is search:", TittleSearch)
   return (
     <div>
-        <Container>
+        <Container id='hero'>
 			<Video
 				// controls
 				autoPlay

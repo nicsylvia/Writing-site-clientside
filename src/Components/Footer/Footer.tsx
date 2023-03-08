@@ -9,7 +9,7 @@ import { HiArrowUp } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { BsWhatsapp } from "react-icons/bs";
 
-const Foooter = () => {
+const Footer = () => {
   return (
     <Container>
       <Wrapper>
@@ -51,7 +51,7 @@ const Foooter = () => {
   );
 };
 
-export default Foooter;
+export default Footer;
 
 const Up = styled(Link)`
   padding: 16px 17px;
