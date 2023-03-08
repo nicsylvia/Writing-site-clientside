@@ -18,11 +18,13 @@ const Login = () => {
           placeholder="Password"
         />{" "}
         <br />
-        <Button type="submit">Login</Button>
+        <BtnWrap to = "/upload-blog">
+           <Button type="submit">Login</Button>
+        </BtnWrap>
         <SignUP>
-          <p>Dont have an account ?</p>{" "}
-          <Link style={{ textDecoration: "none" }} to={"/"}>
-            <b>Sign Up</b>
+          <p>Don't have an account ?</p>{" "}
+          <Link style={{ textDecoration: "none" }} to={"/register"}>
+            <b>Sign Up here</b>
           </Link>
         </SignUP>
       </Wrapper>
@@ -31,6 +33,8 @@ const Login = () => {
 };
 
 export default Login;
+
+const BtnWrap = styled(Link)``;
 
 const Password = styled.div`
   display: flex;
@@ -130,7 +134,7 @@ const SignUP = styled.div`
   }
 `;
 const Button = styled.button`
-  background-color: #eb72bb;
+  background-color: purple;
   border: 0;
   width: 320px;
   border-radius: 12px;

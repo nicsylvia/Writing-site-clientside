@@ -213,11 +213,33 @@ const Card = styled.div`
 	padding: 10px;
 `;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.form`
+  border: 4px solid rgb(48, 48, 61);
+  box-shadow: rgb(48, 48, 61) 0px 3px 8px;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  padding-bottom: 40px;
+
+  @media screen and (max-width: 500px) {
+    box-shadow: none;
+    border: 0;
+  }
+  h4 {
+    color: white;
+    font-size: 35px;
+    text-transform: capitalize;
+  }
+`;
 
 const Container = styled.div`
 	display: flex;
-	justify-content: center;
-	align-items: center;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(24, 24, 32);
 	flex-direction: column;
 `;
