@@ -8,24 +8,14 @@ const Register = () => {
 
   return (
     <Container>
-      <Wrapper onSubmit={registerUser}>
+      <Wrapper>
         <h4>sign up.</h4>
         <Input
-          required
-          value={name}
-          onChange={(e) => {
-            setName(e.target.value);
-          }}
           type={"text"}
           placeholder="name"
         />{" "}
         <br />
         <Input
-          required
-          value={email}
-          onChange={(e) => {
-            setEmail(e.target.value);
-          }}
           type={"email"}
           placeholder="sannidamilola@example.com"
         />{" "}
