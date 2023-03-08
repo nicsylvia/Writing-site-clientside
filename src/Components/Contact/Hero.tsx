@@ -5,7 +5,7 @@ import hero from "../Assets/heroImg.jpg"
 const Hero = () => {
   return (
     <div>
-        <Container>
+        <Container id='hero'>
             <Wrapper>
                 <h1>Contact Me</h1>
                 <p><a href="/">Home</a> / Send-Me-A-Message</p>
@@ -27,13 +27,13 @@ const Container = styled.div`
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: purple;
     position: relative;
     ::before{
         content: "";
         width: 100%;
         height: 100%;
-        background-color: #181820b7;
+        background-color: rgba(0, 0, 0, 0.83);
         position: absolute;
     }
 `;
@@ -42,7 +42,7 @@ const Wrapper = styled.div`
     text-align: center;
     a{
         text-decoration: none;
-        color: white;
+        color: purple;
     }
     p{
         color: grey;

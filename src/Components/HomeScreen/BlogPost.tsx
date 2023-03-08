@@ -119,7 +119,8 @@ const But = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: silver;
+	color: white;
+	background-color: purple;
 	border-radius: 5px;
 `;
 const Second = styled.div`
@@ -202,7 +203,7 @@ const Cont = styled.div`
 `;
 const Button = styled.div`
 	margin: 10px;
-	background-color: skyblue;
+	background-color: purple;
 	width: 130px;
 	height: 35px;
 	display: flex;
