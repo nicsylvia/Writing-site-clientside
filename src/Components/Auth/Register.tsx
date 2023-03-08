@@ -108,12 +108,14 @@ const Password = styled.div`
 
   select{
     width: 100%;
-    height: 70px;
-    background-color: #EDF2F7;
-    border-radius: 5px;
-    border: none;
+    height: 40px;
     outline: none;
+    height: 40px;
+    background-color: transparent;
+    padding-left: 20px;
+    border: 0;
     font-size: 20px;
+    color: white;
     }
 
   @media screen and (max-width: 500px) {
