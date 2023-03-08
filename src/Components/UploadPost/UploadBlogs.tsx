@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { BsImageFill } from "react-icons/bs";
 import axios from "axios";
 import Loading from "./Loading";
+import { Link } from "react-router-dom";
 
 const UploadBlogs = () => {
 	
@@ -38,7 +39,7 @@ const UploadBlogs = () => {
 						onChange={(e) => {
 							setTitle(e.target.value);
 						}}
-						placeholder='Enter Blog name'
+						placeholder='Enter Blog Name'
 					/>
 					<TexArea
 						onChange={(e) => {
@@ -50,7 +51,7 @@ const UploadBlogs = () => {
 						onChange={(e) => {
 							setAuthor(e.target.value);
 						}}
-						placeholder='Enter Blogger name'
+						placeholder='Enter Blogg Link'
 					/>
 					<Select
 						onChange={(e) => {
@@ -70,9 +71,11 @@ const UploadBlogs = () => {
 					author !== "" &&
 					summary !== "" &&
 					image !== "" ? (
-						<Button2 cp='pointer' bg='purple'>
-							Submit
-						</Button2>
+						<BtnWrap to = "/">
+							<Button2 cp='pointer' bg='purple'>
+								Submit
+							</Button2>
+						</BtnWrap>
 					) : (
 						<Button2 cp='not-allowed' bg='black'>
 							Submit
@@ -85,6 +88,8 @@ const UploadBlogs = () => {
 };
 
 export default UploadBlogs;
+
+const BtnWrap = styled(Link)``;
 
 const Img = styled.img`
 	height: 100%;
@@ -121,6 +126,9 @@ const Select = styled.select`
 	border: 0.7px solid purple;
 	outline-color: purple;
 	padding-left: 10px;
+	@media screen and (max-width: 500px) {
+		width: 280px;
+	}
 `;
 
 const TexArea = styled.textarea`
@@ -131,6 +139,9 @@ const TexArea = styled.textarea`
 	outline-color: purple;
 	padding-left: 10px;
 	resize: none;
+	@media screen and (max-width: 500px) {
+		width: 280px;
+	}
 `;
 
 const Inp = styled.input`
@@ -141,6 +152,9 @@ const Inp = styled.input`
 	border: 0.7px solid purple;
 	outline-color: purple;
 	padding-left: 10px;
+	@media screen and (max-width: 500px) {
+		width: 280px;
+	}
 `;
 
 const Input = styled.input`
@@ -185,15 +199,18 @@ const Card = styled.div`
 	box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px,
 		rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
 
-	width: 600px;
+	width: 400px;
 	/* height: 300px; */
-
+/* background-color: red; */
 	margin-top: 100px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
 	padding: 10px;
+	@media screen and (max-width: 500px) {
+		width: 300px;
+	}
 `;
 
 const Wrapper = styled.form`
@@ -209,6 +226,7 @@ const Wrapper = styled.form`
   @media screen and (max-width: 500px) {
     box-shadow: none;
     border: 0;
+	width: 300px;
   }
   h4 {
     color: white;

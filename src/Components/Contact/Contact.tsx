@@ -6,8 +6,8 @@ const Contact = () => {
     <div>
         <Container>
             <Wrapper>
-                <Content></Content>
-                <Form></Form>
+                {/* <Content></Content>
+                <Form></Form> */}
             </Wrapper>
         </Container>
     </div>

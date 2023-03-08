@@ -4,6 +4,7 @@ import {
   AiFillFacebook,
   AiFillTwitterSquare,
   AiFillGoogleSquare,
+  AiFillInstagram,
 } from "react-icons/ai";
 import { HiArrowUp } from "react-icons/hi";
 import { Link } from "react-scroll";
@@ -27,14 +28,14 @@ const Footer = () => {
           <b>09072063269</b>
         </Contact>
         <Social>
-          <Icon href="https://web.facebook.com/sanni.sundayemmanuel">
+          <Icon href="https://web.facebook.com/nic.sylvia.3">
             <AiFillFacebook />
           </Icon>
-          <Icon href="">
+          <Icon href="https://twitter.com/_fuckford?t=HiotKlBB9_o5aQ5TU9IpYA&s=09">
             <AiFillTwitterSquare />
           </Icon>
-          <Icon href="">
-            <AiFillGoogleSquare />
+          <Icon href="https://www.instagram.com/invites/contact/?i=1tuzfuokpb4t0&utm_content=5h127pf">
+            <AiFillInstagram />
           </Icon>
           <Icon href="https://wa.me/234907206326">
             <BsWhatsapp />

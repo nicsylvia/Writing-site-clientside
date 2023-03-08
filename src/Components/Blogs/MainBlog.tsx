@@ -212,6 +212,9 @@ const Button = styled.div`
 	color: black;
 	font-weight: bold;
 	border-radius: 20px;
+	white-space: nowrap;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
 `;
 const Img = styled.img`
     width: 100%;
