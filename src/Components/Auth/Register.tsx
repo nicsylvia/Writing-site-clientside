@@ -14,17 +14,20 @@ const Register = () => {
     <Container>
       <Wrapper>
         <h4>sign up.</h4>
+
         <Input
           type={"text"}
           placeholder="name"
         />{" "}
         <br />
+
         <Input
           required
           type={"email"}
           placeholder="sannidamilola@example.com"
         />{" "}
         <br />
+        
         <Password>
           <InputPassword
             min={6}
@@ -43,13 +46,33 @@ const Register = () => {
           )}
         </Password>
         <br />
+
+        <Div>
+            <h4>How Did You Hear About Us? (Optional)</h4>
+            <select>
+                <option>Click to Select</option>
+                <option>Facebook</option>
+                <option>Twitter</option>
+                <option>Instagram</option>
+                <option>Friend/Family/Co Worker Referrer</option>
+                <option>Google Search</option>
+                <option>Google PlayStore</option>
+                <option>Online Blog</option>
+                <option>Local Newspaper</option>
+                <option>At an event</option>
+                <option>Others</option>
+            </select>
+        </Div>
+
         <Button type="submit">SignUp</Button>
+
         <SignUP>
           <p>Already have an account ?</p>{" "}
           <Link style={{ textDecoration: "none" }} to={"/signIn"}>
             <b>Sign In</b>
           </Link>
         </SignUP>
+
       </Wrapper>
     </Container>
   );
