@@ -1,66 +1,83 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { AiOutlineEye } from "react-icons/ai";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
-import universalism from "../Assets/universalism.png"
+import { Link} from "react-router-dom";
 import brother from "../Assets/brother.png";
+import { useQuery } from "@tanstack/react-query";
+import { GetAllBlogPost } from "../ApiCalls/APIs";
+import { BallTriangle } from "react-loader-spinner";
 
-const MainBlog = () => {
+const BlogPost = () => {
+
+	// Get all blog post:
+	const AllBlogPost = useQuery({
+		queryKey: ["AllBlogs"],
+		queryFn: GetAllBlogPost
+	  })
+
   return (
     <div>
-        <Container>
-          <Link to = "/single-blog-post" style = {{textDecoration: "none"}}>
-		  		<Card>
-					<ImageHolder>
-						<Image src={universalism} />
-						<Cont>
-							<Button>Religion</Button>
+       
+		<Container>
+		{
+			AllBlogPost?.isLoading ? <BallTriangle /> : null
+		}
+						{
+							AllBlogPost?.data?.data.map((post: any) =>(
+								<Link to={`/single-blog-post/${post._id}`} style = {{textDecoration: "none"}}>
+								<Card key={post._id}>
+								<ImageHolder>
+									<Image src={post.blogimage} />
+									<Cont>
+										<Button>{post.blogcategory}</Button>
 
-							<TitleHold>
-								<Title>Universalism as a religion?</Title>
-							</TitleHold>
-						</Cont>
-					</ImageHolder>
+										<TitleHold>
+											<Title>{post.blogname}</Title>
+										</TitleHold>
+									</Cont>
+								</ImageHolder>
 
-                    <DownPart>
-					<Hold>
-						<AuthorImage>
-                            <Img src = {brother} />
-                        </AuthorImage>
-						<AuthName>Augustine Adimike</AuthName>
-					</Hold>
-					<ViewIcon>
-						<AiOutlineEye />
-						<span>0K</span>
-					</ViewIcon>
-				</DownPart>
+								<DownPart>
+								<Hold>
+									<AuthorImage>
+										<Img src = {brother} />
+									</AuthorImage>
+									<AuthName>Augustine Adimike</AuthName>
+								</Hold>
+								<ViewIcon>
+									<AiOutlineEye />
+									<span>0K</span>
+								</ViewIcon>
+							</DownPart>
 
-                <HoverCard>
-				<First>
-					<Hold>
-                    <AuthorImage>
-                            <Img src = {brother} />
-                    </AuthorImage>
-						<AuthName>Augustine Adimike</AuthName>
-					</Hold>
-					<But>+ View</But>
-				</First>
-				<Second>
-					<MainImage src={universalism} />
-					<MainImage src={universalism} />
-					<MainImage src={universalism} />
-				</Second>
-			</HoverCard>
+							<HoverCard>
+							<First>
+								<Hold>
+								<AuthorImage>
+										<Img src = {brother} />
+								</AuthorImage>
+									<AuthName>Augustine Adimike</AuthName>
+								</Hold>
+								<But>+ View</But>
+							</First>
+							<Second>
+								<MainImage src={post.blogimage} />
+								<MainImage src={post.blogimage} />
+								<MainImage src={post.blogimage} />
+							</Second>
+						</HoverCard>
 
-            </Card>
-		  </Link>
+						</Card>
+					</Link>
+							))
+						}			
 		</Container>
 			
     </div>
   )
 }
 
-export default MainBlog;
+export default BlogPost;
 
 const HoverCard = styled.div`
 	height: 150px;
@@ -102,7 +119,8 @@ const But = styled.div`
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: silver;
+	color: white;
+	background-color: purple;
 	border-radius: 5px;
 `;
 const Second = styled.div`
@@ -124,6 +142,7 @@ const Container = styled.div`
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+	/* background-color: red; */
 	/* align-items: center; */
 `;
 const Card = styled.div`
@@ -184,7 +203,7 @@ const Cont = styled.div`
 `;
 const Button = styled.div`
 	margin: 10px;
-	background-color: skyblue;
+	background-color: purple;
 	width: 130px;
 	height: 35px;
 	display: flex;
