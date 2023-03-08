@@ -35,29 +35,6 @@ const Login = () => {
 export default Login;
 
 const BtnWrap = styled(Link)``;
-
-const Password = styled.div`
-  display: flex;
-  border: 4px solid rgb(48, 48, 61);
-  justify-content: center;
-  align-items: center;
-  width: 320px;
-  border-radius: 12px;
-  justify-content: space-between;
-
-  @media screen and (max-width: 500px) {
-    width: 250px;
-  }
-`;
-
-const Icon = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 6px;
-  color: rgb(209, 209, 210);
-`;
-
 const Wrapper = styled.form`
   border: 4px solid rgb(48, 48, 61);
   box-shadow: rgb(48, 48, 61) 0px 3px 8px;
