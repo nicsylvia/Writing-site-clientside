@@ -57,9 +57,9 @@ const Up = styled(Link)`
   padding: 16px 17px;
   border-radius: 4px;
   cursor: pointer;
-  background-color: #005eff;
+  background-color: purple;
   right: 1%;
-  box-shadow: #005eff 0px 8px 24px;
+  box-shadow: purple 0px 8px 24px;
   div {
     display: flex;
     justify-content: center;
@@ -79,7 +79,7 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
+  background-color: #181820;
   padding-top: 30px;
   padding-bottom: 30px;
 `;
@@ -105,9 +105,9 @@ const Logo = styled.div`
   font-size: 10px;
   text-align: center;
   font-family: serif;
-  color: #005eff;
-  border: 4px solid #005eff;
-  padding: 2px;
+  color: white;
+  border: 4px solid purple;
+  padding: 5px;
 
   @media screen and (max-width: 500px) {
     padding: 1px;
@@ -159,7 +159,7 @@ const Icon = styled.a`
   text-decoration: none;
   justify-content: center;
   align-items: center;
-  color: #005eff;
+  color: purple;
   margin-right: 20px;
   font-size: 30px;
   cursor: pointer;
