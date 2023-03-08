@@ -4,7 +4,7 @@ import { BsImageFill } from "react-icons/bs";
 import axios from "axios";
 import Loading from "./Loading";
 
-const UploadPage = () => {
+const UploadBlogs = () => {
 	const [title, setTitle] = React.useState("");
 	const [summary, setSummary] = React.useState("");
 	const [author, setAuthor] = React.useState("");
@@ -101,7 +101,7 @@ const UploadPage = () => {
 	);
 };
 
-export default UploadPage;
+export default UploadBlogs;
 
 const Img = styled.img`
 	height: 100%;

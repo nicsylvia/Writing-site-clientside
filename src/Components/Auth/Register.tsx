@@ -80,8 +80,25 @@ const Register = () => {
 
 export default Register;
 
-const Div = styled.div``;
-
+const Div = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px 10px 0px;
+    h4{
+        margin: 0;
+        margin-bottom: 5px;
+        text-align: start;
+    }
+    select{
+    width: 450px;
+    height: 70px;
+    background-color: #EDF2F7;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    }
+`;
 const InputPassword = styled.input`
   outline: none;
   background-color: transparent;
