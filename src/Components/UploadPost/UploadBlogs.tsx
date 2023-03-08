@@ -4,13 +4,15 @@ import { BsImageFill } from "react-icons/bs";
 import axios from "axios";
 import Loading from "./Loading";
 import { useQuery } from "@tanstack/react-query";
+import { GetAllBlogPost } from "../ApiCalls/APIs";
 
 const UploadBlogs = () => {
 
 	const AllCategory = useQuery({
 		queryKey: ["Categories"],
-		queryFn: 
+		queryFn: GetAllBlogPost
 	})
+
 	const [title, setTitle] = React.useState("");
 	const [summary, setSummary] = React.useState("");
 	const [author, setAuthor] = React.useState("");
@@ -61,10 +63,15 @@ const UploadBlogs = () => {
 						onChange={(e) => {
 							setCategory(e.target.value);
 						}}>
-						<option>Select a category</option>
-						<option value='comedy'>Comedy</option>
-						<option value='music'>Music</option>
-						<option value='romance'>Romance</option>
+						
+						{
+							AllCategory?.data?.data!.map((post: any) =>(
+							<div key={post._id}>
+								<option>Select a category</option>
+								<option value='comedy'>{post.blogcategory}</option>
+							</div>
+							))
+						}
 					</Select>
 
 					{title !== "" &&
