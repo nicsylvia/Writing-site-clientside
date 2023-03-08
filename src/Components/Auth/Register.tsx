@@ -65,11 +65,11 @@ const Register = () => {
         <br />
         <br />
 
-        <Button type="submit">SignUp</Button>
+        <Button type="submit">Sign Up</Button>
 
         <SignUP>
           <p>Already have an account ?</p>{" "}
-          <Link style={{ textDecoration: "none" }} to={"/signIn"}>
+          <Link style={{ textDecoration: "none" }} to={"/login"}>
             <b>Sign In</b>
           </Link>
         </SignUP>
@@ -114,8 +114,16 @@ const Password = styled.div`
     background-color: transparent;
     padding-left: 20px;
     border: 0;
-    font-size: 20px;
-    color: white;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 400;
+    color: rgb(209, 209, 210);
+    }
+    option{
+        color: black;
+        overflow-y: scroll;
+        height: 50px;
+        cursor: pointer;
     }
 
   @media screen and (max-width: 500px) {
