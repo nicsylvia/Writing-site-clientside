@@ -82,8 +82,8 @@ const Wrapper = styled.div`
 `;
 const RegisterCard = styled.div`
     width: 550px;
-    /* padding: 10px 0px 10px 0px; */
-    /* background-color: yellow; */
+    padding: 10px 0px 10px 0px;
+    background-color: white;
     border-radius: 20px 20px 20px 0px;
     display: flex;
     justify-content: center;
@@ -92,7 +92,7 @@ const Wrap = styled.div`
     width: 500px;
     height: 500px;
     overflow-y: scroll;
-    /* padding: 10px 0px 10px 0px; */
+    padding: 10px 0px 20px 0px;
     /* background-color: red; */
     margin-top: 50px;
     text-align: center;
@@ -140,17 +140,18 @@ const Div = styled.div`
 const BtnWrap = styled(Link)`
   text-decoration: none;
   cursor: pointer;
+  background-color: green;
 `;
 const Button = styled.button`
 cursor: pointer;
-    background-color: #062B6F;
-    width: 450px;
+    background-color: skyblue;
+    width: calc(470px - 15px);
     height: 60px;
     border-radius: 20px 10px 10px 0px;
     outline: none;
     border: none;
     color: white;
-    margin-top: 50px;
+    margin-top: 20px;
     font-size: 18px;
     font-weight: bold;
 `;
