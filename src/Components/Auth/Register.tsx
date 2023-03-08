@@ -47,7 +47,23 @@ const Register = () => {
         </Password>
         <br />
 
-        <Password></Password>
+        <Password>
+        <select>
+                <option>Click to Select</option>
+                <option>Facebook</option>
+                <option>Twitter</option>
+                <option>Instagram</option>
+                <option>Friend/Family/Co Worker Referrer</option>
+                <option>Google Search</option>
+                <option>Google PlayStore</option>
+                <option>Online Blog</option>
+                <option>Local Newspaper</option>
+                <option>At an event</option>
+                <option>Others</option>
+            </select>
+        </Password>
+        <br />
+        <br />
 
         <Button type="submit">SignUp</Button>
 
