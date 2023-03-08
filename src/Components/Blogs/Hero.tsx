@@ -5,7 +5,7 @@ import hero from "../Assets/heroImg.jpg"
 const Hero = () => {
     return (
       <div>
-          <Container>
+          <Container id='hero'>
               <Wrapper>
                   <h1>Posts</h1>
                   <p><a href="/">Home</a> / My-Blog</p>
@@ -27,7 +27,7 @@ const Hero = () => {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    color: white;
+    color: purple;
     position: relative;
     ::before{
         content: "";
