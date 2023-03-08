@@ -1,5 +1,7 @@
 import { styled } from '@tanstack/react-query-devtools/build/lib/utils';
 import React from 'react'
+import logo from "../Assets/logo.png"
+import { Link } from "react-router-dom"
 
 const SignUp = () => {
   return (
