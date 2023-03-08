@@ -3,8 +3,14 @@ import styled from "styled-components";
 import { BsImageFill } from "react-icons/bs";
 import axios from "axios";
 import Loading from "./Loading";
+import { useQuery } from "@tanstack/react-query";
 
 const UploadBlogs = () => {
+
+	const AllCategory = useQuery({
+		queryKey: ["Categories"],
+		queryFn: 
+	})
 	const [title, setTitle] = React.useState("");
 	const [summary, setSummary] = React.useState("");
 	const [author, setAuthor] = React.useState("");
@@ -21,27 +27,6 @@ const UploadBlogs = () => {
 		console.log(url);
 	};
 
-	const UploadEbook = async () => {
-		setShow(true);
-		const formdata = new FormData();
-
-		formdata.append("title", title);
-		formdata.append("summary", summary);
-		formdata.append("category", category);
-		formdata.append("author", author);
-		formdata.append("coverImage", image);
-
-		await axios
-			.post("http://localhost:5000/server/newBook", formdata)
-			.then((res) => {
-				console.log(res);
-				setShow(false);
-			})
-			.catch(() => {
-				setShow(false);
-			});
-	};
-
 	return (
 		<Container>
 			{show ? <Loading /> : null}
@@ -52,31 +37,31 @@ const UploadBlogs = () => {
 					</Circle>
 
 					<Input onChange={ImageOnchange} id='pix' type='file' />
-					<Button htmlFor='pix'>Upload Cover Image</Button>
+					<Button htmlFor='pix'>Upload Blog Image</Button>
 
 					<Inp
 						onChange={(e) => {
 							setTitle(e.target.value);
 						}}
-						placeholder='Enter Title'
+						placeholder='Enter Blog name'
 					/>
 					<TexArea
 						onChange={(e) => {
 							setSummary(e.target.value);
 						}}
-						placeholder='Summary...'
+						placeholder='Blog Summary...'
 					/>
 					<Inp
 						onChange={(e) => {
 							setAuthor(e.target.value);
 						}}
-						placeholder='Enter Author name'
+						placeholder='Enter Blogger name'
 					/>
 					<Select
 						onChange={(e) => {
 							setCategory(e.target.value);
 						}}>
-						<option>select a category</option>
+						<option>Select a category</option>
 						<option value='comedy'>Comedy</option>
 						<option value='music'>Music</option>
 						<option value='romance'>Romance</option>
@@ -87,11 +72,11 @@ const UploadBlogs = () => {
 					author !== "" &&
 					summary !== "" &&
 					image !== "" ? (
-						<Button2 onClick={UploadEbook} cp='pointer' bg='black'>
+						<Button2 cp='pointer' bg='purple'>
 							Submit
 						</Button2>
 					) : (
-						<Button2 cp='not-allowed' bg='silver'>
+						<Button2 cp='not-allowed' bg='black'>
 							Submit
 						</Button2>
 					)}
@@ -186,7 +171,7 @@ const Circle = styled.div`
 	width: 250px;
 	border-radius: 5px;
 	/* border-radius: 50%; */
-	background-color: purple;
+	background-color: #e6e4e4;
 	display: flex;
 	justify-content: center;
 	align-items: center;
