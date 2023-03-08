@@ -59,7 +59,7 @@ const Up = styled(Link)`
   cursor: pointer;
   background-color: purple;
   right: 1%;
-  box-shadow: purple 0px 8px 24px;
+  box-shadow: purple 0px 2px 2px;
   div {
     display: flex;
     justify-content: center;
