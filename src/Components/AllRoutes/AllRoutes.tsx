@@ -1,6 +1,7 @@
 import React from 'react'
 import { useRoutes } from 'react-router-dom'
 import Login from '../Auth/Login'
+import Register from '../Auth/Register'
 import SignUp from '../Auth/SignUp'
 import Blogs from '../Blogs/Blogs'
 import ContactScreen from '../Contact/ContactScreen'
@@ -22,7 +23,7 @@ const AllRoutes = () => {
         },
         {
             path: "/register",
-            element: <SignUp />
+            element: <Register />
         },
         {
             path: "/send-me-a-message",

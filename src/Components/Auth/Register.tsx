@@ -4,34 +4,7 @@ import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const SignUp = () => {
-  const [show, setShow] = useState(false);
-  const eye = () => {
-    setShow(!show);
-  };
-
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
-
-  const navigate = useNavigate();
-
-  const registerUser = async (e: any) => {
-    e.preventDefault();
-    await axios
-      .post("https://bootcamp-47qt.onrender.com/api/register", {
-        name,
-        email,
-        password,
-      })
-      .then((res) => {
-        window.localStorage.setItem("userData", JSON.stringify(res.data.data));
-        navigate("/signIn");
-      })
-      .catch((err) => {
-        alert("User Already Exit Sign In");
-      });
-  };
+const Register = () => {
 
   return (
     <Container>
@@ -91,7 +64,7 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Register;
 
 const InputPassword = styled.input`
   outline: none;
