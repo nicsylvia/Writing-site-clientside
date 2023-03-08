@@ -14,17 +14,17 @@ const Footer = () => {
     <Container>
       <Wrapper>
         <Logo>
-          Sunday <br /> Business <br /> Space
+          Augustine <br /> Writes 
         </Logo>
         <Copyright>
           <h4>CopyRight</h4>
-          ©2022 <b>Sanni</b>, Inc. All rights reserved. Terms of use Privacy
+          ©2023 <b>Sylvia</b>, Inc. All rights reserved. Terms of use Privacy
           Policy
         </Copyright>
         <Contact>
           <h4>Contact</h4>
-          sundayysanni@gmail.com <br />
-          <b>0802434991</b>
+          adimikeaugustine@gmail.com <br />
+          <b>09072063269</b>
         </Contact>
         <Social>
           <Icon href="https://web.facebook.com/sanni.sundayemmanuel">

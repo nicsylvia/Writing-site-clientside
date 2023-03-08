@@ -23,10 +23,11 @@ const Header = () => {
           <Wrapper>
             <WrapAll>
               <Logo to = "/">
-                {/* <Img src={logo} /> */}
-                <h3>
+                <Img>
+                    <h3>
                     28 Writes
-                </h3>
+                    </h3>
+                </Img>
               </Logo>
               <Navigation>
                   <Nav  to = "/"  cc = "white">Home</Nav>
@@ -144,6 +145,9 @@ const Logo = styled(Link)`
     width: 100px;
     height: 70px;
     font-weight: bold;
+    text-decoration: none;
+    color: white;
+    font-style: italic;
 `;
 const WrapAll = styled.div`
   /* background-color: orange; */
@@ -152,11 +156,12 @@ const WrapAll = styled.div`
   align-items: center;
   justify-content: space-between;
 `;
-const Img = styled.img`
+const Img = styled.div`
   width: 100%;
   height: 100%;
   margin-right: 50px;
   object-fit: contain;
+  font-size: 18px;
   /* background-color: green; */
 `;
 const Navigation = styled.div`
