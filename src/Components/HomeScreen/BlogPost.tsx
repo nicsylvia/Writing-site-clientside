@@ -29,7 +29,11 @@ const BlogPost = () => {
 								<ImageHolder>
 									<Image src={post.blogimage} />
 									<Cont>
-										<Button>{post.blogcategory}</Button>
+										<Button>
+											{
+												post.blogcategory
+                                            }
+										</Button>
 
 										<TitleHold>
 											<Title>{post.blogname}</Title>
@@ -212,6 +216,9 @@ const Button = styled.div`
 	color: black;
 	font-weight: bold;
 	border-radius: 20px;
+	white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 `;
 const Img = styled.img`
     width: 100%;

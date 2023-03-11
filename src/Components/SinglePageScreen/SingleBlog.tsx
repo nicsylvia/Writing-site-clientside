@@ -8,39 +8,51 @@ import universalism from "../Assets/universalism.png"
 
 const SingleBlog = () => {
 
-	const {blogid} = useParams()
-	console.log("This is ID", blogid)
+	const {myId} = useParams()
+
+	console.log("This is ID", myId)
 
 	//   Get single post:
-	const SingleBlogPost = useQuery({
-		queryKey: ["SingleBlog"],
-		queryFn: () =>{
-			return GetSinglePost(blogid!)
+	// const SingleBlogPost = useQuery({
+	// 	queryKey: ["SingleBlog", blogid],
+	// 	queryFn: () =>{
+	// 		return GetSinglePost(blogid!)
+	// 	}
+	// })
+
+	const getOneBlog = useQuery({
+		queryKey :["getOne" ,myId],
+		queryFn : (id:any)=>{
+			GetSinglePost(id)
 		}
 	})
+	console.log("this is esther get one" , getOneBlog)
+
+	
+	console.log("Here is single blog: ", GetSinglePost)
 
   return (
     <div>
        {
-		SingleBlogPost?.data?.data.map((single: any) =>(
-			<Container key={single._id}>
-			<Wrapper>
-				<First> 
-					<Hold>
-						<AuthorImage>
-                            <Img src = {feyi} />
-                        </AuthorImage>
-						<AuthName>Augustine Adimike</AuthName>
-					</Hold>
-				</First>
-				<MainImage src= {single.blogimage} />
-				<h2>{single.blogname}</h2>
-				<Desc>
-					{single.blogdescription}
-				</Desc>
-			</Wrapper>
-		</Container>
-		))
+		// SingleBlogPost?.data?.data.map((single: any) =>(
+		// 	<Container key={single._id}>
+		// 	<Wrapper>
+		// 		<First> 
+		// 			<Hold>
+		// 				<AuthorImage>
+        //                     <Img src = {feyi} />
+        //                 </AuthorImage>
+		// 				<AuthName>Augustine Adimike</AuthName>
+		// 			</Hold>
+		// 		</First>
+		// 		<MainImage src= {single.blogimage} />
+		// 		<h2>{single.blogname}</h2>
+		// 		<Desc>
+		// 			{single.blogdescription}
+		// 		</Desc>
+		// 	</Wrapper>
+		// </Container>
+		// ))
 	   }
     </div>
   )

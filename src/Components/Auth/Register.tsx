@@ -3,8 +3,15 @@ import styled from "styled-components";
 import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import * as yup from "yup"
+import { yupResolver } from "@hookform/resolvers/yup"
+import { useMutation } from "@tanstack/react-query";
 
 const Register = () => {
+const navigate = useNavigate()
+
+const 
+
   const [show, setShow] = useState(false);
   const eye = () => {
     setShow(!show);
