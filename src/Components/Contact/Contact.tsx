@@ -2,6 +2,12 @@ import React from 'react'
 import styled from 'styled-components';
 
 const Contact = () => {
+
+    const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
+    const [title, setTitle] = useState("");
+    const [Subject, setSubject] = useState("");
+
   return (
     <div>
          <Container>
