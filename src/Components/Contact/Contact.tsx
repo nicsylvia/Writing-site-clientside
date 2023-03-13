@@ -4,12 +4,60 @@ import styled from 'styled-components';
 const Contact = () => {
   return (
     <div>
-        <Container>
-            <Wrapper>
-                {/* <Content></Content>
-                <Form></Form> */}
-            </Wrapper>
-        </Container>
+         <Container>
+      <Wrapper>
+        <Top>
+          <h1>Get in Touch</h1>
+        </Top>
+        <Hold>
+          <Left>
+            <Up>
+              <h2>Contact us</h2>
+            </Up>
+            <p>
+              Don't hesitate to reach out to us. We'll respond as soon as
+              possible
+            </p>
+                <span>cur@uniabuja.edu.ng</span>
+            <Prof>
+              <h4>Professor Taibat Adebukola Atoyebi</h4>
+                <span>taibat.atoyebi@uniabuja.edu.ng</span>
+            </Prof>
+            <Prof>
+              <h4>Dr. Dike Ojji</h4>
+              <span>dike.ojji@uniabuja.ed.ng</span>
+            </Prof>
+          </Left>
+          <Right >
+            <Input  type="text"
+              onChange={(e) => {
+                setName(e.target.value);
+              }}
+              placeholder="Name"
+            />
+            <Input  type="email"
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+              placeholder="Email"
+            />
+            <Input type="text" 
+              onChange={(e) => {
+                setTitle(e.target.value);
+              }}
+              placeholder="Subject"
+            />
+            <Box 
+              onChange={(e) => {
+                setSubject(e.target.value);
+              }}
+              placeholder="Message"
+            />
+            <Button type="submit">Submit</Button>
+          </Right>
+        </Hold>
+      </Wrapper>
+    </Container>
     </div>
   )
 }
