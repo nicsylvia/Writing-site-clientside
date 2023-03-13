@@ -18,20 +18,20 @@ const Contact = () => {
         <Hold>
           <Left>
             <Up>
-              <h2>Contact us</h2>
+              <h2>Contact 28</h2>
             </Up>
             <p>
               Don't hesitate to reach out to us. We'll respond as soon as
               possible
             </p>
-                <span>cur@uniabuja.edu.ng</span>
+                <span>adimikeaugustine@gmail.com</span>
             <Prof>
-              <h4>Professor Taibat Adebukola Atoyebi</h4>
-                <span>taibat.atoyebi@uniabuja.edu.ng</span>
+              <h4>Adimike Augustine</h4>
+                <span>09072063269</span>
             </Prof>
             <Prof>
-              <h4>Dr. Dike Ojji</h4>
-              <span>dike.ojji@uniabuja.ed.ng</span>
+              <h4>Dev Sylvia</h4>
+              <span>nicsylvia15f@gmail.com</span>
             </Prof>
           </Left>
           <Right >
@@ -74,7 +74,7 @@ const Prof = styled.div`
   display: flex;
   flex-direction: column;
   span{
-    color: blue;
+    color: purple;
   }
   a {
     margin-top: -13px;
@@ -83,7 +83,7 @@ const Prof = styled.div`
 const Button = styled.button`
   height: 50px;
   width: 150px;
-  background-color: #00a85a;
+  background-color: purple;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -96,8 +96,8 @@ const Button = styled.button`
   :hover {
     transform: scale(0.9);
     background-color: #f5f5f5;
-    color: #00a85a;
-    border: 1px solid #00a85a;
+    color: purple;
+    border: 1px solid purple;
   }
 `;
 const Box = styled.textarea`
@@ -152,7 +152,7 @@ const Left = styled.div`
     margin-top: -40px;
   }
   span{
-    color: blue;
+    color: purple;
   }
   display: flex;
   flex-direction: column;
@@ -175,7 +175,7 @@ const Hold = styled.div`
 const Top = styled.div`
   h1 {
     font-size: 35px;
-    color: #00a85a;
+    color: purple;
   }
 `;
 const Wrapper = styled.div`
