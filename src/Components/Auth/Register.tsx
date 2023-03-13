@@ -6,11 +6,26 @@ import axios from "axios";
 import * as yup from "yup"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { useMutation } from "@tanstack/react-query";
+import { signUp } from "../ApiCalls/APIs";
 
 const Register = () => {
 const navigate = useNavigate()
 
-const 
+const dispatch = useAppDispatch()
+
+const userSchema = yup.object({
+  name: yup.string().required(),
+  email: yup.string().required(),
+  password : yup.string().required()
+})
+
+type formData = yup.InferType<>
+
+const registerUser = useMutation({
+  mutationFn : signUp,
+  mutationKey : ["allUsers"]
+})
+
 
   const [show, setShow] = useState(false);
   const eye = () => {
