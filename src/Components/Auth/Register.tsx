@@ -11,7 +11,7 @@ import { signUp } from "../ApiCalls/APIs";
 const Register = () => {
 const navigate = useNavigate()
 
-const dispatch = useAppDispatch()
+// const dispatch = useAppDispatch()
 
 const userSchema = yup.object({
   name: yup.string().required(),
@@ -19,7 +19,7 @@ const userSchema = yup.object({
   password : yup.string().required()
 })
 
-type formData = yup.InferType<>
+// type formData = yup.InferType<>
 
 const registerUser = useMutation({
   mutationFn : signUp,
