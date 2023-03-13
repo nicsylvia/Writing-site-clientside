@@ -42,7 +42,7 @@ const Wrapper = styled.div`
     text-align: center;
     a{
         text-decoration: none;
-        color: purple;
+        color: white;
     }
     p{
         color: grey;
